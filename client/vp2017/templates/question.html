@@ -4,82 +4,25 @@
             <!-- content -->
             <div class="col-md-2">
             </div>
-            <div class="content col-md-6 mainbody">
+            <div ng-click="questionGoback()" class="goback">goback</div>
+            <div class="content col-md-6 mainbody" id="question_content">
                 <!-- Blog -->
-                <div id="blog" class="single-post">
-                    <!-- Post single item-->
-                    <div class="post-item">
-                        <br>
-                        <div class="post-item-wrap">
-                                <div ng-click="questionGoback()">goback</div>
-                                <ul>
-                                    <!-- <li ng-repeat="item in pageData.questionList">
-                                        <input type="radio" name="question" value="1" ng-model="pageData.questionAnswer" />
-                                        {{item}}
-                                    </li> -->
-                                    <label ng-repeat="item in pageData.questionList">
-                                            <input type="radio" name="demo" value="{{item}}" ng-model="$parent.demo">{{item}}
-                                          </label>
-                                          <h1>{{demo}}</h1>
-                                </ul>
-                                <button ng-click="changePage('result')">提交</button>
-                                
-                            <!-- <h2>{{pageData.title}}</h2>s
-                            <div ng-if="pageData.day == 3" class="post-item-description">
-                                <blockquote>
-                                    <p>Looking at how the nature of work will change the environment and how it will impact us in the next 3 years. You either embark on the journey [of reimagining yourselves] or get left behind.</p>
-                                </blockquote>
-                                <p class="text-right"><b>Jimmy Ng</b><br />Head, Group Audit</p>
-                            </div>
-                            <p ng-if="pageData.text1">{{pageData.text1}}</p>
-                            <p ng-if="pageData.text2">{{pageData.text2}}</p> -->
-<!-- 
-                            <div ng-if="pageData.day == 5" width="100%" style="text-align:center">
-                                <hr/>
-                                <a class="btn btn-primary" href="You_have_a_say_Ask_SGMC_anything.ics">save the date/add to calendar</a>
-                                <hr/>
-                            </div> -->
-
-                            <!-- <div ng-if="pageData.day != 5" class="post-video">
-                                <video ng-repeat="video in pageData.videos" class="day-video" width="100%" ng-attr-poster="{{video.poster}}" controls>
-                                    <source ng-src="{{video.src}}" type="video/mp4" />
-                                    Your browser does not support HTML5 video.
-                                </video>
-                            </div> -->
-
-                            <!-- todo: change this dummy video -->
-                            <!-- <div ng-if="pageData.day == 5" class="post-video">
-                                <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2417911/sp/241791100/embedIframeJs/uiconf_id/42868821/partner_id/2417911?iframeembed=true&playerId=kaltura_player&entry_id=1_sg9l7u8r&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;&wid=0_ws0csptf" width="642" height="400" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" title="Kaltura Player"></iframe>
-                            </div> -->
-
-                            <!-- <div class="post-navigation">
-                                <a ng-if="pageData.day != 1" href="" ng-click="changePage('day' + (pageData.day - 1))" class="post-prev">
-                                    <div class="post-prev-title"><span>Day {{pageData.day - 1}}</span>{{pageData.previousBtnText}}</div>
-                                </a>
-                                <a href="" ng-click="changePage('menu')" class="post-all">
-                                    <span style="color:#888;font-size:12px;margin-left:-2px">Home</span>
-                                    <i class="fa fa-th"></i>
-                                </a>
-                                
-                                <a ng-if="pageData.day != 5" href="" ng-click="changePage('day' + (pageData.day + 1))" class="post-next">
-                                    <div class="post-next-title"><span>Day {{pageData.day + 1}}</span>{{pageData.nextBtnText}}</div>
-                                </a>
-                            </div> -->
-                            <!-- <div ng-click="changePage('question')" style="background:balck;display:inline-block;width:50px;height:60px;z-index:100;">按钮</div> -->
-                            <!-- <br><br>
-                            <hr> -->
-                            <!-- <div class="lead">
-                                {{pageData.commentQuestion}}
-                            </div> -->
-                            <!-- <div ng-include="'vp2017/templates/comments.html'"></div> -->
-                        </div>
-                    </div>
-                    <!-- end: Post single item-->
+                <div class="head">DAILY POLL</div>
+                <ul class="list">
+                    <!-- <li ng-repeat="item in pageData.questionList">
+                        <input type="radio" name="question" value="1" ng-model="pageData.questionAnswer" />
+                        {{item}}
+                    </li> -->
+                    <label ng-repeat="item in pageData.questionList">
+                        <input type="radio" name="demo" value="{{item}}" ng-model="$parent.demo">{{item}}
+                    </label>
+                    <h1>{{demo}}</h1>
+                </ul>
+                <button ng-click="changePage('result')">提交</button>         
                 </div>
 
             </div>
-            <!-- end: content -->
-        </div>
+        
     </div>
 </section>
 

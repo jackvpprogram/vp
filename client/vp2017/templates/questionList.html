@@ -4,15 +4,13 @@
                 <!-- content -->
                 <div class="col-md-2">
                 </div>
-                <div class="content col-md-6 mainbody">
-                    <!-- Blog -->
-                    <div id="blog" class="single-post">
-                        <!-- Post single item-->
-                        <div class="post-item">
-                            <br>
-                            <div class="post-item-wrap">
-                                    <div class="goback" ng-click="questionGoback()">goback</div>
-                                    <ul>
+                <div class="goback" ng-click="questionGoback()">goback</div>
+                <div class="content col-md-6 mainbody" id="questionList_content">
+                    <div class="head"></div>
+
+                            <div class="post-item-wrap" id="questionList">
+                                    
+                                    <ul >
                                        
                                         <li ng-repeat="item in pageData.List">
                                            <a href="" ng-click="changePage('question')">{{item.content}}</a>
@@ -20,12 +18,11 @@
                                     </ul>
                             </div>
                         </div>
-                        <!-- end: Post single item-->
-                    </div>
+                     
     
                 </div>
                 <!-- end: content -->
-            </div>
+           
         </div>
     </section>
     
