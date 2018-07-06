@@ -1,0 +1,86 @@
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:07.819Z"}
+{"level":"error","message":"Worker 49272 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:08.549Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:08.550Z"}
+{"level":"error","message":"Worker 49273 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:09.270Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:09.270Z"}
+{"level":"error","message":"Worker 49282 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:09.952Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:09.952Z"}
+{"level":"error","message":"Worker 49283 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:10.610Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:10.610Z"}
+{"level":"error","message":"Worker 49284 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:11.419Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:11.419Z"}
+{"level":"error","message":"Worker 49286 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:12.185Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:12.185Z"}
+{"level":"error","message":"Worker 49287 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:12.913Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:12.913Z"}
+{"level":"error","message":"Worker 49288 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:13.573Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:13.573Z"}
+{"level":"error","message":"Worker 49289 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:14.210Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:14.211Z"}
+{"level":"error","message":"Worker 49290 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:14.871Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:14.871Z"}
+{"level":"error","message":"Worker 49291 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:15.577Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:15.578Z"}
+{"level":"error","message":"Worker 49292 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:16.217Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:16.217Z"}
+{"level":"error","message":"Worker 49293 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:16.855Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:16.855Z"}
+{"level":"error","message":"Worker 49294 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:17.499Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:17.500Z"}
+{"level":"error","message":"Worker 49295 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:18.228Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:18.228Z"}
+{"level":"error","message":"Worker 49296 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:18.942Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:18.946Z"}
+{"level":"error","message":"Worker 49297 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:19.706Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:19.706Z"}
+{"level":"error","message":"Worker 49298 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:20.372Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:20.372Z"}
+{"level":"error","message":"Worker 49299 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:20.997Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:20.997Z"}
+{"level":"error","message":"Worker 49300 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:21.632Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:21.632Z"}
+{"level":"error","message":"Worker 49302 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:22.253Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:22.254Z"}
+{"level":"error","message":"Worker 49303 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:22.878Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:22.878Z"}
+{"level":"error","message":"Worker 49304 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:23.494Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:23.494Z"}
+{"level":"info","message":"Server listening at port 3333","timestamp":"2018-07-05T15:49:30.983Z"}
+{"level":"info","message":"Connected to mongodb server.","timestamp":"2018-07-05T15:49:30.997Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:50:18.592Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:50:26.654Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:50:57.668Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:50:58.850Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:50:59.978Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:51:03.351Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:51:59.110Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:06.018Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:07.725Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:09.788Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:11.156Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:12.520Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:14.829Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:16.084Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:17.905Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:18.567Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:20.081Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:25.989Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:27.873Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:30.627Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:32.740Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:33.928Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:35.149Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:40.372Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:41.608Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:42.705Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:43.661Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:44.895Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:46.093Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:47.372Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:49.181Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:50.813Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:52.045Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:53.156Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:54.595Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:55.358Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:56.383Z"}

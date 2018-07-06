@@ -1,0 +1,58 @@
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T03:02:14.345Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T02:38:11.374Z\"}","timestamp":"2018-07-06T03:02:14.350Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:04:35.811Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T03:04:35.817Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T03:02:14.350Z\"}","timestamp":"2018-07-06T03:04:35.819Z"}
+{"level":"info","message":"Server listening at port 3333","timestamp":"2018-07-06T03:12:03.665Z"}
+{"level":"info","message":"Connected to mongodb server.","timestamp":"2018-07-06T03:12:03.677Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:12:33.975Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:12:38.453Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:12:41.491Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:54:17.416Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:54:20.792Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:54:24.311Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:54:39.956Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:54:55.326Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:55:03.658Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:55:09.148Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:55:26.385Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:55:29.850Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:57:10.703Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T04:03:37.914Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T04:03:37.920Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T03:54:17.358Z\"}","timestamp":"2018-07-06T04:03:37.926Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T04:04:15.235Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T04:04:22.519Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T04:04:25.457Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T04:12:49.874Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T04:12:49.879Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T04:04:15.184Z\"}","timestamp":"2018-07-06T04:12:49.881Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T04:13:21.071Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T04:13:21.078Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T04:12:49.881Z\"}","timestamp":"2018-07-06T04:13:21.081Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T05:59:10.363Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:31:42.542Z"}
+{"level":"info","message":"00 mark: on 'new message', room=ask, message=1111111111111111111111111, socket.username=hello2@123.com","timestamp":"2018-07-06T06:31:56.768Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:32:34.366Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:32:36.420Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:32:37.985Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:38:10.379Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T06:38:10.407Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":580,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T04:13:21.081Z\"}","timestamp":"2018-07-06T06:38:10.414Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:38:13.024Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:46:28.461Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T06:46:28.469Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":580,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T06:38:10.414Z\"}","timestamp":"2018-07-06T06:46:28.470Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:53:54.132Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:53:58.959Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:54:02.076Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T06:54:08.340Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:06:18.355Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:06:23.519Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:06:26.372Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:07:03.788Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:07:07.431Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:08:12.844Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T07:08:12.854Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":580,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T07:06:18.293Z\"}","timestamp":"2018-07-06T07:08:12.856Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:08:52.886Z"}

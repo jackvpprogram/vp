@@ -1,0 +1,49 @@
+.app-container{
+  height: 100%;
+}
+
+.common-img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.play-game-icon{
+  height: 4rem;
+}
+
+.user-type-btns{
+  position: fixed;
+  right: 26px;
+  top: 200px;
+  z-index: 999;
+  text-align: center;
+  line-height: 12px !important;
+}
+.user-type-btn{
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  background-color: #000000;
+}
+.user-type-btn-active{
+  background-color: #dc1f2b !important;
+}
+
+/* Comments template */
+.even-row{
+  border: 1px solid lightgrey;
+}
+
+.comment-interaction-div{
+  min-width: 60px;
+  text-align: center;
+}
+
+.replies-container{
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid lightgray;
+}

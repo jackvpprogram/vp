@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name="author" content="DBS" /> 
+	<meta name="description" content="VIP 2017 - Profile">
+	<!-- Document title --> <title>DBS - Reimagine Banking</title> 
+	<!-- Stylesheets & Fonts -->  
+	<link href="css/plugins.css" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet"> 
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/color-variations/red-dark.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+<body class="no-page-loader">	
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+		<!-- alertBox modal -->
+		<div class="modal fade" id="sm-alertbox" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title red-text">Alert</h4>
+			  </div>
+			  <div class="modal-body black-text" id="alertbox"></div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- alertBox modal -->
+        <!-- congratBox modal -->
+		<div class="modal fade" id="sm-congratBox" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title red-text">Congrats!</h4>
+			  </div>
+			  <div class="modal-body black-text" id="congratbox"></div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- congratBox modal -->
+        <!-- Header -->
+        <header id="header" class="header-fullwidth header-dark-transparent dark">
+            <div id="header-wrap">
+                <div class="container"> <!--Logo-->
+                    <div id="logo">
+                        <!-- <a href="index.html" class="logo" data-dark-logo="images/logo-dark.png"> <img src="images/logo.png" alt="Polo Logo"> </a> -->
+                        <a href="menu.html" class="logo"> VP ENGAGEMENT 2017 </a>
+                    </div>
+                    <!--End: Logo-->
+
+                                        <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <button class="lines-button x"> <span class="lines"></span> </button>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+
+<!--Navigation-->
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                	<li><a href="menu.html">Daily Themes</a>
+                                        <ul id="menu-list" class="dropdown-menu">
+                                        	<li><a href="day1.html">Day 1 - Reimagine Banking</a></li>
+                                        	<li><a href="day2.html">Day 2 - Reimagine the Way We Work</a></li>
+                                        	<li><a href="day3.html">Day 3 - Reimagine Ourselves </a></li>
+                                        	<li><a href="day4.html">Day 4 - Tips & Tricks from Sim</a></li>
+                                        	<li><a href="day5.html">Day 5 - You Have a Say! </a></li>
+                                        </ul>                                	
+                                	</li>
+                                	<li><a href="ask.html">Ask SGMC Anything</a></li>
+                                	<li><a href="help.html">Help</a></li>
+                                	<li><a href="leaderboard.html">Leaderboard</a></li>
+                                	<li><a href="profile.html">My Page</a></li>
+                                	<li><a href="#" id="logout">Logout</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--END: NAVIGATION-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+
+        <!-- Page Content -->
+        <section class="sidebar-right">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-1">
+					</div>                                    
+                    <!-- start : Profile-->
+                    <div class="content col-md-4">
+                        <h3 class="profileUsername"></h3>
+                        <div class="profilePoints"></div>
+                        <h3 id="voucherListTitle">Your winnings so far</h3>
+                        <ul class="voucherList list-group"></ul>
+                       
+                        <!--<hr >
+                        <h5>For daily winners:</h5>
+                        <p>Congratulations! You have won $50 worth of vouchers from Foodpanda! All you need to do is to insert this promo code when you order from the Foodpanda mobile app. The code is valid till 31 Jan 2018. Enjoy the makan!</p>                   
+                        <h5>For overall winners:</h5>
+                        <p>Congratulations! You have won $200 worth of vouchers from Foodpanda! To make it easy for you, we have given you 2 x $100 promo codes. Time for a team lunch or a family feast? You decide! All you need to do is to insert the promo codes when you order from the Foodpanda mobile app. Valid till 31 Jan 2018. Enjoy the makan!</p>-->
+                    </div>
+                    <!-- end: Profile-->
+
+                    <!-- start : Chat List -->
+                    <div class="content col-md-6 mainbody">
+                    	<br>
+                    	<p>Your posted comments:</p>
+                        <div class="profileChats">
+                        </div>
+                    </div>
+                    <!-- end: Chat List -->
+                </div>
+            </div>
+        </section>
+        <!-- end: Page Content -->
+    </div>
+    <!-- end: Wrapper -->
+
+    <!-- Go to top button -->
+    <!--<a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>-->
+
+ <!--Plugins-->
+ <script src="js/Base64.min.js"></script> 
+ <script src="js/jquery.js"></script>
+ <script src="js/plugins.js"></script>
+
+<!--Template functions-->
+ <script src="js/functions.js"></script> 
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="../js/chat.js"></script>  
+     <script src="../js/lib/moment.min.js"></script>
+     <script src="../js/client.js"></script>
+     <script src="../js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+     
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+
+    // Initialize instances:
+    var socket = io.connect();
+    var siofu = new SocketIOFileUpload(socket);
+
+    // Configure the three ways that SocketIOFileUpload can read files:
+    //document.getElementById("upload_btn").addEventListener("click", siofu.prompt, false);
+    //siofu.listenOnInput(document.getElementById("select_btn"));
+    //siofu.listenOnDrop(document.getElementById("file_drop"));
+    //siofu.listenOnUpload(document.getElementById("jpeg_upload_button"),document.getElementById("result_image"));    
+    siofu.listenOnSubmit(document.getElementById("sendMessage"), document.getElementById("select_btn"));
+
+    // Do something on upload progress:
+    siofu.addEventListener("progress", function(event){
+        var percent = event.bytesLoaded / event.file.size * 100;
+        console.log("File is", percent.toFixed(2), "percent loaded");
+        $("#upload_percentage").text("Sending " + percent.toFixed(2) + "%"); 
+    });
+
+    // Do something when a file is uploaded:
+    siofu.addEventListener("complete", function(event){
+    	$("#source_image").attr("src", "");
+    	$("#upload_percentage").text("");
+    	$("#source_image").hide();
+        console.log(event.success);
+        //console.log(event.file);
+        var message = $(".inputComment").val();
+        console.log("FILE EVENT: " + event.detail.pathName);
+        newImage(event.detail, message);
+    });
+
+}, false);
+</script>
+<script>
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function gen_guid() {
+        return 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x'
+                ? r
+                : (r & 0x3 | 0x8)
+            return v.toString(16).toUpperCase()
+        })
+    }
+
+    var duid = "81 | |"+gen_guid();
+    var couponList = [];
+    var messageList = [];
+    var campaignList = [];
+    var user_id = "";
+
+    $.get( "https://demo-dbsvp-app.3radical.com/_/api//api/registerDev?mode=start&duid="+duid+"&app=App&referrer=&schemeId=81&cacheKill="+Date.now(), function( data ) {
+        if(data.requestStatus.failureCode == 0){
+            var uid = data.results.uid;
+            $.post( "https://demo-dbsvp-app.3radical.com/_/api//api/registerDev", { mode: "regGM", duid: duid,uid:uid,app:"app:dbsconf",email:getCookie("username") , schemeId:"81" ,brandCode:81 , cacheKill:Date.now() }, function( resp ) {
+                if(resp.requestStatus.failureCode == 0){
+                    user_uid = resp.results.uid;
+                    $.get( "https://demo-dbsvp-app.3radical.com/_/api//api/get?uid="+user_uid+"&schemeId=81&cacheKill="+Date.now(), function( info ) {
+                        if(info.requestStatus.failureCode == 0){
+                            processInfos(info.results.messages);
+                        }else{
+                            window.alertBox("Unable to process coupon");
+                        }
+                    });
+                    
+                }else{
+
+                }
+                //console.log("data",data);
+            });
+
+        }else{
+            window.alertBox("error getting coupon details");
+        }
+        //console.log("data",data);
+    });
+
+    function processInfos(infos){
+        couponList = [];
+        for (var i = 0, len = infos.length; i < len; i++) {
+            if(infos[i].QRCode)
+                couponList.push(infos[i]);
+        }
+
+        if(couponList.length > 0)
+            findCampaign(couponList);
+        else
+             $("#voucherListTitle").html("No vouchers yet? Never mind, here’s your points tally");
+    }
+
+    function findCampaign(couponList){
+        console.log("coupon list",couponList);
+        var campaignIdList = _.map(couponList,function(c){ return c.cid});
+        console.log("campaignIdList",campaignIdList);
+        $.get( "https://demo-dbsvp-app.3radical.com/_/api//api/getCampaigns?uid="+user_id+"&campaigns=["+campaignIdList+"]&cacheKill="+Date.now(), function( data ) {
+            if(data.requestStatus.failureCode == 0){
+                findMessage(data.results);
+            }
+        });
+    }
+
+    function findMessage(campaignList){
+        console.log("campaignList",campaignList);
+        var messageIdList = _.map(campaignList,function(c){return c.messageId});
+        console.log("messageIdList",messageIdList);
+        $.get( "https://demo-dbsvp-app.3radical.com/_/api//api/getMessages?uid="+user_id+"&messages=["+messageIdList+"]&cacheKill="+Date.now(), function( data ) {
+            if(data.requestStatus.failureCode == 0){
+               
+                console.log("message result",data.results);
+                createCoupon(data.results);
+            }
+        });
+    }
+
+    function createCoupon(messageList){
+       
+        if(couponList.length > 0)
+        {
+            _.forEach(couponList,function(c,i){
+                console.log("coupon list data",c,i);
+                var voucherName = messageList[i].title;
+                $(".voucherList").append($("<li>").html(voucherName + " - <b>"+c.QRCode+"</b >").addClass("list-group-item"));
+            });
+        }else{
+            $("#voucherListTitle").html("No vouchers yet? Never mind, here’s your points tally");
+        }
+    }
+
+    //https://demo-dbsvp-app.3radical.com/_/api//api/getMessages?uid=2CCD624408BB43E7975CA68633EEA372&messages=%5B3218%2C3220%2C3221%2C3219%2C3222%5D&cacheKill=1500444589132
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102808148-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+</html>

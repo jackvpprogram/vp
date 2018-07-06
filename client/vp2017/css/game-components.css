@@ -1,0 +1,23 @@
+.game-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: white;
+}
+
+.game-top-bar{
+    width: 100%;
+    height: 5rem;
+}
+#board-game-back-btn {
+    margin: 2px;
+    font-size: 1rem;
+}
+
+.game-iframe{
+    width: 100%;
+    height: calc(100% - 5rem);
+}

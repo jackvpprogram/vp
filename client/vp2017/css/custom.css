@@ -1,0 +1,152 @@
+/* 
+
+1. Add your custom Css styles below
+2. Place the this code in your template: 
+
+ <link href="css/custom.css" rel="stylesheet">
+
+*/
+
+@font-face {
+  font-family: "Frutiger";
+  src: url(../fonts/DBS/frutiger-webfont.eot);
+  /* IE9 Compat Modes */
+  src: url(../fonts/DBS/frutiger-webfont.eot) format('embedded-opentype'), /* IE6-IE8 */
+  url(../fonts/DBS/frutiger-webfont.woff) format('woff'), /* Pretty Modern Browsers */
+  url(../fonts/DBS/frutiger-webfont.ttf) format('truetype'), /* Safari, Android, iOS */
+  url(../fonts/DBS/frutiger-webfont.svg) format('svg');
+  /* Legacy iOS */
+}
+body, html {
+  font-family: "Frutiger" !important;
+}
+body {
+  background-image: url(../images/login_banner.jpg);
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+a:hover {
+  color: #cc0000;
+  text-decoration: none;
+}
+h1, h2 ,p {
+  font-family: 'Frutiger';
+}
+h3, h4, h5, h6 {
+  font-family: 'Frutiger';
+}
+
+.navbar-brand {
+  font-family: 'Frutiger';
+}
+.panel-title {
+  font-family: 'Frutiger';
+}
+
+#page-title .page-title > h1 {
+	font-family: 'Frutiger';
+}
+
+.menuday {
+	background: #000;
+	opacity: 0.35;
+	filter: alpha(opacity=35);
+}
+.comments {
+	text-align: center;
+}
+.logo {
+	color: #FFF;
+}
+a {
+	color: #cc0000; 
+}
+a:hover, a:focus, a:active {
+	text-decoration: none;
+    outline: none;
+    color: #cc0000; 
+}
+
+#goToTop:after, #goToTop:before {
+	background-color: #cc0000;
+}
+
+.post-navigation a:hover {
+	transition: all 0.3s ease;
+    color: #cc0000 !important; 
+}
+
+#mainMenu nav > ul > li .dropdown-menu > li.hover-active > span {
+	color: #cc0000 !important; 
+}
+
+blockquote {
+    border-left: 3px solid #cc0000;
+}
+
+section {
+	padding: 0 0;
+	background-color: #efefef;	
+}
+
+.mainbody {
+	border-left:1px solid #ccc;
+	background:#FFF;
+	box-shadow: 5px 5px 5px #ccc;
+}
+.sidebar {
+	padding-top: 20px;
+}
+
+.dbsColor {
+    background-color: #ff0000;
+    padding: 10px;
+    color: #fff;
+}
+
+.profileChats {
+	padding: 10px;
+}
+
+.post-item .comments {
+    padding: 0;
+    border-top: 0;
+}
+
+li.not-ready a, li.not-ready a:hover, li.not-ready a:visited, li.not-ready a:active {
+    cursor: not-allowed !important;
+    color: #3e3c3c !important;
+}
+
+.not-ready > .lead > a > span{
+  color:#eaeaec !important;
+}
+.portfolio-item.not-ready{
+  cursor:not-allowed;
+}
+.not-ready div.portfolio-description > a > h3,.not-ready div.portfolio-description > a >span{
+  color: rgba(82, 77, 77, 0.4);
+}
+#goToSC {
+		padding: 6px;
+		padding-left:10px;
+		width: 39px;
+		height: 39px;
+		position: fixed;
+		right: 10px;
+		top: 100px;
+		z-index: 10;
+		background-color: #ccc;
+		border-radius: 50px;
+		opacity: 0.8;
+}

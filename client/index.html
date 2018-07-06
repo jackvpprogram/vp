@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="DBS"/>
+    <meta name="description" content="VIP 2017">
+    <title>DBS - Reimagine Banking</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="vp2017/css/plugins.css" rel="stylesheet">
+    <link href="vp2017/css/style.css" rel="stylesheet">
+    <link href="vp2017/css/game-components.css" rel="stylesheet">
+    <link href="vp2017/css/responsive.css" rel="stylesheet">
+    <link href="vp2017/css/color-variations/red-dark.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="vp2017/css/custom.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="vp2017/css/result.css" rel="stylesheet">
+    <link href="vp2017/css/question.css" rel="stylesheet">
+
+</head>
+<body class="no-page-loader" style="min-width: 320px;">
+    <!--Page loading...-->
+    <div ng-app="vpconf.mainApp" ng-controller="mainCtrl" class="app-container">
+        <div id="wrapper">
+            <div ng-if="!data.showGame">
+                <!-- alertBox modal -->
+                <div class="modal fade" id="sm-alertbox" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title red-text">Alert</h4>
+                            </div>
+                            <div class="modal-body black-text" id="alertbox"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- alertBox modal -->
+                <!-- congratBox modal -->
+                <div class="modal fade" id="sm-congratBox" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title red-text">Congrats!</h4>
+                            </div>
+                            <div class="modal-body black-text" id="congratbox"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- congratBox modal -->
+                <!-- Header -->
+                <header id="header" class="header-dark-transparent dark">
+                    <div id="header-wrap">
+                        <div class="container"> <!--Logo-->
+                            <div id="logo">
+                                <!-- <a href="index.html" class="logo" data-dark-logo="images/logo-dark.png"> <img src="images/logo.png" alt="Polo Logo"> </a> -->
+                                <a href="menu.html" class="logo"> VP ENGAGEMENT 2017 </a>
+                            </div>
+                            <!--End: Logo-->
+                            <!--Navigation Resposnive Trigger-->
+                            <div id="mainMenu-trigger">
+                                <button class="lines-button x"> <span class="lines"></span> </button>
+                            </div>
+                            <!--end: Navigation Resposnive Trigger-->
+
+                            <!--Navigation-->
+                            <div id="mainMenu">
+                                <div class="container">
+                                    <nav>
+                                        <ul ng-if="!data.hasLogin">
+                                            <li><a href="#loginheader"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                                        </ul>
+
+                                        <ul ng-if="data.hasLogin">
+                                            <li><a href="" ng-click="changePage('menu')">Daily Themes</a>
+                                                <ul id="menu-list" class="dropdown-menu">
+                                                    <li><a href="" ng-click="changePage('day1')">Day 1 - Reimagine Banking</a></li>
+                                                    <li><a href="" ng-click="changePage('day2')">Day 2 - Reimagine the Way We Work</a></li>
+                                                    <li><a href="" ng-click="changePage('day3')">Day 3 - Reimagine Ourselves </a></li>
+                                                    <li><a href="" ng-click="changePage('day4')">Day 4 - Tips & Tricks from Sim</a></li>
+                                                    <li><a href="" ng-click="changePage('day5')">Day 5 - You Have a Say! </a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" ng-click="changePage('ask')">Ask SGMC Anything</a></li>
+                                            <li><a href="" ng-click="changePage('help')">Help</a></li>
+                                            <li><a href="" ng-click="changePage('leaderboard')">Leaderboard</a></li>
+                                            <li><a href="" ng-click="changePage('profile')">My Page</a></li>
+                                            <li><a href="#" id="logout">Logout</a></li>
+                                            <li ng-click="showBoardGame()">
+                                                <img class="common-img play-game-icon" src="vp2017/images/dice.jpg">
+                                                <!--<a href="#" ng-click="showBoardGame()">Play Game</a>-->
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!--END: NAVIGATION-->
+                        </div>
+                    </div>
+                </header>
+                <!-- end: Header -->
+
+                <div ng-if="data.user.isAdmin" class="user-type-btns ng-cloak">
+                    <div ng-click="changeUserType(1)" class="user-type-btn" ng-class="{'user-type-btn-active': data.user.userType == '1'}">VP</div>
+                    <div ng-click="changeUserType(2)" class="user-type-btn" ng-class="{'user-type-btn-active': data.user.userType == '2'}">AVP</div>
+                </div>
+
+
+                <!-- Go to top button -->
+                <a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>
+
+                <div ui-view></div>
+            </div>
+
+            <div ng-if="data.showGame" class="game-container">
+                <button class="btn btn-primary" ng-click="hideBoardGame()"><i class="fa fa-angle-left"></i>Back</button>
+                <iframe class="game-iframe" src="https://demo-dbsvp-app.3radical.com/dbsconf/main/app/index.html"></iframe>
+            </div>
+        </div>
+        <!-- end: Wrapper -->
+    </div>
+
+    <script src="js/lib/angular.js"></script>
+    <script src="js/lib/angularjs@1.0.15/release/angular-ui-router.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="vp2017/js/jquery.js"></script>
+    <script src="vp2017/js/Base64.min.js"></script>
+    <script src="vp2017/js/plugins.js"></script>
+
+    <script src="vp2017/js/internal-ioc/ioc.js"></script>
+    <script src="vp2017/js/device-api/get-api-address.js"></script>
+    <script src="vp2017/js/device-api/helpers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/q.js/1.5.1/q.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/chat.js"></script>
+
+    <script src="vp2017/js/services/utilityService.js"></script>
+    <script src="js/app.js"></script>
+
+    <!--<script src="vp2017/js/functions.js"></script>-->
+
+    <script>
+        ioc.define("_", _)
+        ioc.define("Q", Q)
+        ioc.define("jQuery", $)
+        ioc.define("3r/storage", localStorage)
+    </script>
+    <!--<script src="vp2017/js/device-api/device.js"></script>-->
+    <script>
+        window.apiAddress = "https://demo-dbsvp-app.3radical.com"
+        Device = deviceFactory({schemeId : 81})
+    </script>
+
+    <script>
+//        function getCookie(cname) {
+//            var name = cname + "=";
+//            var ca = document.cookie.split(';');
+//            for(var i=0; i<ca.length; i++) {
+//                var c = ca[i];
+//                while (c.charAt(0)==' ') c = c.substring(1);
+//                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+//            }
+//            return "";
+//        }
+//
+//        var localusername = getCookie("username");
+//        if(localusername)
+//            window.location = "/vp2017/menu.html";
+//        else
+//            window.location = "/vp2017/login.html";
+
+        function updatelowercase() {
+            var email = $(".usernameInput").val().toLowerCase();
+            $(".usernameInput").val(email);
+            return;
+        }
+    </script>
+</body>
+</html>

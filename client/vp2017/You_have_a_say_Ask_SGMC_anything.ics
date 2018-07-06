@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.marudot.com//iCal Event Maker
+X-WR-CALNAME:You have a say! Ask SGMC anything!
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:SGT
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20170720T035251Z
+UID:20170720T035251Z-1950153398@marudot.com
+DTSTART;TZID="Asia/Singapore":20170728T150000
+DTEND;TZID="Asia/Singapore":20170728T170000
+SUMMARY:You have a say! Ask SGMC anything!
+DESCRIPTION:Do you have a question that you want to ask? Or do you want some career advice? Whatever it is\, just ask and you shall get the answer!\n\nThe Singapore Management Committee (SGMC) will answer your questions at a special townhall this Friday (28 July) at 3.00pm at the auditorium at MBFC Level 3.\n
+LOCATION:Auditorium at MBFC Level 3
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:You have a say! Ask SGMC anything!
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

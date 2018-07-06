@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="DBS" />
+    <meta name="description" content="VIP 2017 - Gallery">
+    <title>DBS - Reimagine Banking</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/color-variations/red-dark.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/plugins/Gallery/css/blueimp-gallery.css">
+    <link rel="stylesheet" href="js/plugins/Gallery/css/blueimp-gallery-indicator.css">
+    <link rel="stylesheet" href="js/plugins/Gallery/css/blueimp-gallery-video.css">
+    <link rel="stylesheet" href="js/plugins/Gallery/css/demo/demo.css">
+</head>
+
+<body class="no-page-loader">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- alertBox modal -->
+        <div class="modal fade" id="sm-alertbox" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title red-text">Alert</h4>
+                    </div>
+                    <div class="modal-body black-text" id="alertbox"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- alertBox modal -->
+        <!-- congratBox modal -->
+		<div class="modal fade" id="sm-congratBox" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title red-text">Congrats!</h4>
+			  </div>
+			  <div class="modal-body black-text" id="congratbox"></div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- congratBox modal -->
+        <!-- Header -->
+        <header id="header" class="header-fullwidth header-dark-transparent dark">
+            <div id="header-wrap">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <!-- <a href="index.html" class="logo" data-dark-logo="images/logo-dark.png"> <img src="images/logo.png" alt="Polo Logo"> </a> -->
+                        <a href="menu.html" class="logo"> VP ENGAGEMENT 2017 </a>
+                    </div>
+                    <!--End: Logo-->
+
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <button class="lines-button x"> <span class="lines"></span> </button>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+
+                    <!--Navigation-->
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li><a href="menu.html">Daily Schemes</a>
+                                        <ul id="menu-list" class="dropdown-menu">
+                                            <li><a href="day1.html">Day 1 - Reimagine Banking</a></li>
+                                            <li><a href="day2.html">Day 2 - Reimagine the Way We Work</a></li>
+                                            <li><a href="day3.html">Day 3 - Reimagine Ourselves </a></li>
+                                            <li><a href="day4.html">Day 4 - Tips & Tricks from Sim</a></li>
+                                            <li><a href="day5.html">Day 5 - You Have a Say! </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="ask.html">Ask SGMC Anything</a></li>
+                                    <li><a href="help.html">Help</a></li>
+                                    <li><a href="pm.html">Private Message</a></li>
+                                    <li><a href="profile.html">My Page</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--END: NAVIGATION-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+
+        <!-- Page Content -->
+        <section id="page-content" class="sidebar-right">
+            <div class="container">
+                <div class="row">
+                    <!-- content -->
+                    <div class="content col-md-8">
+                        <div id="links" class="links"></div>
+                        <div >
+                            <a href="#" style="margin:20px auto; width :100%;" onclick="loadPreviousMessage();return false;" class="btn btn-primary red-text"><em class="icon-caret-right"></em> <span id="loadpreviousmsg">Load Previos Image</span><span id="totalmessage"></span></a>
+                        </div>
+                        <div id="blueimp-gallery" class="blueimp-gallery">
+                            <div class="slides"></div>
+                            <h3 class="title"></h3>
+                            <a class="prev">‹</a>
+                            <a class="next">›</a>
+                            <a class="close">×</a>
+                            <a class="play-pause"></a>
+                            <ol class="indicator"></ol>
+                        </div>            
+                       
+                    </div>
+                    <!-- end: content -->
+
+                    <!-- Sidebar-->
+                    <div class="sidebar col-md-4">
+                        <div class="">
+                            <!--Tabs with Posts-->
+                            <div class="widget">
+                                <h4 class="widget-title">Share your photo gain more points.</h4>
+                                <div id="chat">
+                                    <br>
+                                    <img id="source_image" class="img-responsive" style="display:none">
+                                    <div id="upload_percentage"></div>
+                                    <textarea rows="3" type="text" class="inputComment form-control hidden" placeholder="Type your comment and hit Send."></textarea>
+                                    <button class="btn btn-primary" id="upload_btn"><i class="fa fa-file-image-o"> Upload</i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="btn btn-primary" id="sendMessage"><i class="fa fa-send"></i>Send</button>
+                                    <input type=file id="select_btn" value="Select" style="display:none">
+                                    <div class="messages"></div>
+                                    <br><br>
+                                </div>
+                            </div>
+                            <!--End: Tabs with Posts-->
+                        </div>
+                    </div>
+                    <!-- end: sidebar-->
+                </div>
+            </div>
+        </section>
+        <!-- end: Page Content -->
+    </div>
+    <!-- end: Wrapper -->
+
+    <!-- Go to top button -->
+    <!--<a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>-->
+
+    <!--Plugins-->
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <!--Template functions-->
+    <script src="js/functions.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/lib/moment.min.js"></script>
+    <script src="../js/client.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-helper.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-gallery.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-gallery-fullscreen.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-gallery-indicator.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-gallery-video.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-gallery-vimeo.js"></script>
+    <script src="js/plugins/Gallery/js/blueimp-gallery-youtube.js"></script>
+    <script src="js/plugins/Gallery/js/jquery.blueimp-gallery.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Initialize instances:
+            var socket = io.connect();
+            var siofu = new SocketIOFileUpload(socket);
+
+            // Configure the three ways that SocketIOFileUpload can read files:
+            //document.getElementById("upload_btn").addEventListener("click", siofu.prompt, false);
+            //siofu.listenOnInput(document.getElementById("select_btn"));
+            //siofu.listenOnDrop(document.getElementById("file_drop"));
+            //siofu.listenOnUpload(document.getElementById("jpeg_upload_button"),document.getElementById("result_image"));    
+            siofu.listenOnSubmit(document.getElementById("sendMessage"), document.getElementById("select_btn"));
+
+            // Do something on upload progress:
+            siofu.addEventListener("progress", function (event) {
+                var percent = event.bytesLoaded / event.file.size * 100;
+                console.log("File is", percent.toFixed(2), "percent loaded");
+                $("#upload_percentage").text("Sending " + percent.toFixed(2) + "%");
+            });
+
+            // Do something when a file is uploaded:
+            siofu.addEventListener("complete", function (event) {
+                $("#source_image").attr("src", "");
+                $("#upload_percentage").text("");
+                $("#source_image").hide();
+                console.log(event.success);
+                //console.log(event.file);
+                var message = $(".inputComment").val();
+                console.log("FILE EVENT: " + event.detail.pathName);
+                newImage(event.detail, message);
+            });
+
+        }, false);
+
+    </script>
+
+</body>
+
+</html>

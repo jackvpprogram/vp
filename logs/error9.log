@@ -1,0 +1,15 @@
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:33:01.989Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T07:33:06.913Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T08:47:42.084Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T08:47:42.099Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":580,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T07:21:56.796Z\"}","timestamp":"2018-07-06T08:47:42.100Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T08:48:16.549Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T08:48:16.559Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":580,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T08:47:42.100Z\"}","timestamp":"2018-07-06T08:48:16.561Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T08:48:26.893Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T08:48:26.902Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":580,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T08:48:16.561Z\"}","timestamp":"2018-07-06T08:48:26.903Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T08:48:27.946Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T08:49:25.123Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T13:01:41.436Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T13:01:44.115Z"}

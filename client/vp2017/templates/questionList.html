@@ -1,0 +1,33 @@
+<section class="sidebar-right">
+        <div class="container">
+            <div class="row">
+                <!-- content -->
+                <div class="col-md-2">
+                </div>
+                <div class="content col-md-6 mainbody">
+                    <!-- Blog -->
+                    <div id="blog" class="single-post">
+                        <!-- Post single item-->
+                        <div class="post-item">
+                            <br>
+                            <div class="post-item-wrap">
+                                    <div class="goback" ng-click="questionGoback()">goback</div>
+                                    <ul>
+                                       
+                                        <li ng-repeat="item in pageData.List">
+                                           <a href="" ng-click="changePage('question')">{{item.content}}</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <!-- end: Post single item-->
+                    </div>
+    
+                </div>
+                <!-- end: content -->
+            </div>
+        </div>
+    </section>
+    
+         
+    

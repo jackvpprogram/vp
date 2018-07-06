@@ -1,0 +1,64 @@
+<div class="comments" id="comments" name="comments">
+    <div id="chat">
+        <img id="source_image" class="img-responsive" style="display:none">
+        <div id="upload_percentage"></div>
+        <textarea rows="3" type="text" class="inputComment form-control" placeholder="Write your comment and hit Send."></textarea>
+
+        <button ng-click="uploadImage()" class="btn btn-primary" id="upload_btn"><i class="fa fa-file-image-o"></i>Image</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" id="sendMessage"><i class="fa fa-send"></i>Send</button>
+        <input ng-file-select="onFileSelect($files)" type=file id="select_btn" value="Select" style="display:none">
+        <br><br>
+
+        <div class="chatArea">
+            <ul class="nav nav-tabs navbar nav" role="tablist">
+                <li role="presentation" class="active like-tab"><a class="like" href="" aria-controls="home" role="tab" data-toggle="tab" ng-click="loadMostLikes(false)">Recent</a></li>
+                <li role="presentation" class="like-tab"><a class="like" href="" aria-controls="profile" role="tab" data-toggle="tab" ng-click="loadMostLikes(true)">Most Likes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="messages">
+        <div ng-repeat="comment in data.comments" align="left" style="display: block;" class="message panel-body white" ng-class="{'even-row': $index % 2==0}">
+            <!-- comment -->
+            <span class="black-text"><b>{{comment.username}}</b></span>
+            <small class="black-text">{{getCommentDisplayTime(comment.time)}}</small>
+            <span style="float:right" class="comment-interaction-div">
+                <span class="black-text text-right">{{comment.replyNum + " " + (comment.replyNum > 1 ? "replies" : "reply")}}</span>
+                <br>
+                <a ng-click="showReplies(comment)" class="red-text text-right" href="">Reply</a>
+            </span>
+            <span style="float:right" class="likesDiv comment-interaction-div">
+                <span class="black-text text-right">{{comment.likes.length + " " + (comment.likes.length > 1 ? "likes" : "like")}}</span>
+                <br>
+                <a ng-click="toggleLike(comment)" class="red-text text-right" id="{{comment._id}}" href="" data-likecount="{{comment.likes.length}}">{{comment.likes.indexOf(data.user.userId) == -1 ? "Like": "Unlike"}}</a>
+            </span>
+            <br>
+            <span class="messageBody black-text">{{formatCommentMsg(comment.msg)}}</span>
+
+            <!-- comment's replies -->
+            <br>
+            <div ng-if="data.showRepliesOfComment == comment._id">
+                <div ng-if="data.currentCommentReplies.length > 0" class="replies-container">
+                    <div ng-repeat="reply in data.currentCommentReplies">
+                        <span class="black-text"><b>{{reply.username}}</b></span>
+                        <small class="black-text">{{getCommentDisplayTime(reply.time)}}</small>
+                    <span style="float:right" class="likesDiv">
+                        <span class="black-text text-right">{{reply.likes.length + " " + (reply.likes.length > 1 ? "likes" : "like")}}</span>
+                        <br>
+                        <a ng-click="toggleLike(reply)" class="red-text text-right" id="{{reply._id}}" href="" data-likecount="{{reply.likes.length}}">{{reply.likes.indexOf(data.user.userId) == -1 ? "Like": "Unlike"}}</a>
+                    </span>
+                        <br>
+                        <span class="messageBody black-text">{{formatCommentMsg(reply.msg)}}</span>
+                    </div>
+                </div>
+
+                <textarea ng-model="data.currentReply" rows="2" type="text" class="inputComment form-control" placeholder="Write your comment and hit reply."></textarea>
+                <button class="btn btn-primary" ng-click="replyComment(comment)"><i class="fa fa-send"></i>Reply</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div align="right" id="previousmsg">
+        </em><a href="#" onclick="loadPreviousMessage();return false;" class="red-text"><em class="icon-caret-right"></em> <span id="loadpreviousmsg">View earlier comments</span> <span id="totalmessage"></span></a>
+    </div>
+</div>

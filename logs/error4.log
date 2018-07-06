@@ -1,0 +1,99 @@
+{"level":"error","message":"Worker 49198 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:53.467Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:53.467Z"}
+{"level":"error","message":"Worker 49199 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:54.109Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:54.109Z"}
+{"level":"error","message":"Worker 49200 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:54.762Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:54.763Z"}
+{"level":"error","message":"Worker 49201 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:55.387Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:55.387Z"}
+{"level":"error","message":"Worker 49202 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:56.031Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:56.031Z"}
+{"level":"error","message":"Worker 49203 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:56.658Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:56.658Z"}
+{"level":"error","message":"Worker 49204 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:57.295Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:57.295Z"}
+{"level":"error","message":"Worker 49205 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:57.969Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:57.969Z"}
+{"level":"error","message":"Worker 49206 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:58.610Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:58.610Z"}
+{"level":"error","message":"Worker 49207 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:59.271Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:59.271Z"}
+{"level":"error","message":"Worker 49208 died with code: 1, and signal: null","timestamp":"2018-07-05T12:19:59.941Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:19:59.941Z"}
+{"level":"error","message":"Worker 49209 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:00.616Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:00.616Z"}
+{"level":"error","message":"Worker 49210 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:01.268Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:01.268Z"}
+{"level":"error","message":"Worker 49212 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:01.938Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:01.941Z"}
+{"level":"error","message":"Worker 49213 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:02.585Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:02.585Z"}
+{"level":"error","message":"Worker 49214 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:03.225Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:03.225Z"}
+{"level":"error","message":"Worker 49215 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:03.862Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:03.862Z"}
+{"level":"error","message":"Worker 49216 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:04.459Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:04.459Z"}
+{"level":"error","message":"Worker 49217 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:05.052Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:05.052Z"}
+{"level":"error","message":"Worker 49218 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:05.755Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:05.755Z"}
+{"level":"error","message":"Worker 49219 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:06.402Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:06.402Z"}
+{"level":"error","message":"Worker 49220 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:07.066Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:07.067Z"}
+{"level":"error","message":"Worker 49221 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:07.753Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:07.753Z"}
+{"level":"error","message":"Worker 49222 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:08.450Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:08.450Z"}
+{"level":"error","message":"Worker 49223 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:09.103Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:09.103Z"}
+{"level":"error","message":"Worker 49224 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:09.758Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:09.758Z"}
+{"level":"error","message":"Worker 49225 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:10.408Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:10.408Z"}
+{"level":"error","message":"Worker 49226 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:11.060Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:11.060Z"}
+{"level":"error","message":"Worker 49228 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:11.691Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:11.691Z"}
+{"level":"error","message":"Worker 49229 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:12.305Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:12.305Z"}
+{"level":"error","message":"Worker 49230 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:12.913Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:12.913Z"}
+{"level":"error","message":"Worker 49231 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:13.518Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:13.518Z"}
+{"level":"error","message":"Worker 49232 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:14.162Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:14.163Z"}
+{"level":"error","message":"Worker 49233 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:14.823Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:14.823Z"}
+{"level":"error","message":"Worker 49234 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:15.426Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:15.426Z"}
+{"level":"error","message":"Worker 49235 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:16.038Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:16.038Z"}
+{"level":"error","message":"Worker 49257 died with code: 1, and signal: null","timestamp":"2018-07-05T12:20:59.605Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:20:59.606Z"}
+{"level":"error","message":"Worker 49258 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:00.244Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:00.245Z"}
+{"level":"error","message":"Worker 49259 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:00.860Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:00.860Z"}
+{"level":"error","message":"Worker 49260 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:01.476Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:01.476Z"}
+{"level":"error","message":"Worker 49262 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:02.094Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:02.095Z"}
+{"level":"error","message":"Worker 49263 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:02.705Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:02.706Z"}
+{"level":"error","message":"Worker 49264 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:03.307Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:03.307Z"}
+{"level":"error","message":"Worker 49265 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:03.907Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:03.907Z"}
+{"level":"error","message":"Worker 49266 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:04.539Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:04.540Z"}
+{"level":"error","message":"Worker 49267 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:05.191Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:05.191Z"}
+{"level":"error","message":"Worker 49268 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:05.857Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:05.857Z"}
+{"level":"error","message":"Worker 49269 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:06.527Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:06.528Z"}
+{"level":"error","message":"Worker 49270 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:07.158Z"}
+{"level":"info","message":"Starting a new worker","timestamp":"2018-07-05T12:21:07.158Z"}
+{"level":"error","message":"Worker 49271 died with code: 1, and signal: null","timestamp":"2018-07-05T12:21:07.819Z"}

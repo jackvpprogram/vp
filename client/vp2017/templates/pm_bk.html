@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head> 
+ 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+ 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+ 	<meta name="author" content="INSPIRO" /> 
+ 	<meta name="description" content="Themeforest Template Polo"> 
+ 	<!-- Document title --> 
+ 	<title>POLO | The Multi-Purpose HTML5 Template</title> 
+ 	<!-- Stylesheets & Fonts --> 
+ 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800" rel="stylesheet" type="text/css" /> 
+ 	<link href="css/plugins.css" rel="stylesheet"> 
+ 	<link href="css/style.css" rel="stylesheet"> 
+ 	<link href="css/responsive.css" rel="stylesheet">
+    <!-- Template color -->
+    <link href="css/color-variations/red.css" rel="stylesheet" type="text/css" media="screen">     	
+ </head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div id="header-wrap">
+                <div class="container"> <!--Logo-->
+                    <div id="logo">
+                        <!-- <a href="index.html" class="logo" data-dark-logo="images/logo-dark.png"> <img src="images/logo.png" alt="Polo Logo"> </a> -->
+                        <a href="menu.html" class="logo"> VP 2017 </a>
+                    </div>
+                    <!--End: Logo-->
+
+                     <!--Top Search Form-->
+                    <div id="top-search">
+                        <form action="search-results-page.html" method="get">
+                            <input type="text" name="q" class="form-control" value="" placeholder="Start typing & press  &quot;Enter&quot;">
+                        </form>
+                    </div>
+                    <!--end: Top Search Form-->
+
+                                        <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <button class="lines-button x"> <span class="lines"></span> </button>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+
+<!--Navigation-->
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                	<li><a href="menu.html">Daily Schemes</a>
+                                        <ul class="dropdown-menu">
+                                        	<li><a href="day1.html">Day 1 - Reimagine Banking</a></li>
+                                        	<li><a href="day1.html">Day 2 - Reimagine Banking2</a></li>
+                                        </ul>                                	
+                                	</li>
+                                	<li><a href="pm.html">Private Message</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--END: NAVIGATION-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+
+        <!-- Page Content -->
+        <section id="page-content" class="sidebar-right">
+            <div class="container">
+                <div class="row">
+                    <!-- content -->
+                    <div class="content col-md-9">
+                        <!-- Blog -->
+                        <div id="blog" class="single-post">
+                            <!-- Post single item-->
+                            <div class="post-item">
+                                <div class="post-item-wrap">
+                                    <!-- Comments -->
+                                    <div class="comments" id="comments">
+                                    	<div id="chat">
+                                    		<br>
+                                    		<img id="source_image" class="img-responsive">
+                                    		<div id="upload_percentage"></div>
+                                    		<textarea rows="2" type="text" class="inputComment form-control" placeholder="Type your comment here."></textarea>
+                                    		
+                                    		<button id="upload_btn" style="float:left">Select Image</button>
+                                    		<button id="sendMessage">Send</button>
+                                    		<input type=file id="select_btn" value="Select" style="display:none">
+                                    		<br><br>
+	
+                                    		<div class="chatArea"> 
+	                                    		<ul class="nav nav-tabs navbar nav" role="tablist">
+    	                                			<li role="presentation" class="active like-tab"><a class="like" href="#" aria-controls="home" role="tab" data-toggle="tab"  onclick="loadMostLikes();return false;">Recent</a></li>
+    	                                			<li role="presentation" class="like-tab"><a class="like" href="#" aria-controls="profile" role="tab" data-toggle="tab"  onclick="loadMostLikes();return false;">Most Likes</a></li>
+    	                                		</ul>
+    	                                	</div>
+    	                                </div>
+
+                                    	<div class="messages"></div>
+                                    	<br>
+                                    	<div align="right" id="previousmsg"> 
+                                    		</em><a href="#" onclick="loadPreviousMessage();return false;" class="red-text"><em class="icon-caret-right"></em> <span id="loadpreviousmsg">View earlier comments</span> <span id="totalmessage"></span></a>
+                                    	</div>
+                                    </div>
+                                    <!-- end: Comments -->
+                                </div>
+                            </div>
+                            <!-- end: Post single item-->
+                        </div>
+
+                    </div>
+                    <!-- end: content -->
+
+                    <!-- Sidebar-->
+                    <div class="sidebar col-md-3">
+                        <div class="">
+                            <!--Tabs with Posts-->
+                            <div class="widget">
+                                <div id="tabs-01" class="tabs simple">
+                                    <ul class="tabs-navigation">
+                                        <li class="active"><a href="#tab1">Popular</a> </li>
+                                        <li class=""><a href="#tab2">Featured</a> </li>
+                                        <li class=""><a href="#tab3">Recent</a> </li>
+                                    </ul>
+                                    <div class="tabs-content">
+                                        <div class="tab-pane active" id="tab1">
+                                            <div class="post-thumbnail-list">
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/5.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Suspendisse consectetur fringilla luctus</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 6m ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/6.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Consectetur adipiscing elit</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 24h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/7.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <div class="post-thumbnail-list">
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/6.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Consectetur adipiscing elit</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 24h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/7.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/8.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Fringilla luctus Lorem ipsum dolor sit amet</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab3">
+                                            <div class="post-thumbnail-list">
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/7.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/8.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Fringilla luctus Lorem ipsum dolor sit amet</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 11h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                                <div class="post-thumbnail-entry">
+                                                    <img alt="" src="images/blog/thumbnail/6.jpg">
+                                                    <div class="post-thumbnail-content">
+                                                        <a href="#">Consectetur adipiscing elit</a>
+                                                        <span class="post-date"><i class="fa fa-clock-o"></i> 24h ago</span>
+                                                        <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End: Tabs with Posts-->
+                        </div>
+                    </div>
+                    <!-- end: sidebar-->
+                </div>
+            </div>
+        </section>
+        <!-- end: Page Content -->
+    </div>
+    <!-- end: Wrapper -->
+
+    <!-- Go to top button -->
+    <!--<a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>-->
+
+ <!--Plugins-->
+ <script src="js/jquery.js"></script>
+ <script src="js/plugins.js"></script>
+
+<!--Template functions-->
+ <script src="js/functions.js"></script> 
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="../js/chat.js"></script>  
+     <script src="../js/lib/moment.min.js"></script>
+     <script src="../js/client.js"></script>
+     <script src="../js/custom.js"></script>
+     
+</body>
+
+</html>

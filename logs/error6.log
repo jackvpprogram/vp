@@ -1,0 +1,70 @@
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:52:57.235Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:53:03.497Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:53:05.034Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:53:05.769Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:53:56.327Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:53:58.100Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:53:59.638Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:54:41.417Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T15:54:54.597Z"}
+{"level":"info","message":"Server listening at port 3333","timestamp":"2018-07-05T16:09:37.498Z"}
+{"level":"info","message":"Connected to mongodb server.","timestamp":"2018-07-05T16:09:37.515Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T16:12:38.391Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T16:12:43.177Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T16:12:48.682Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T16:12:56.113Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T16:13:00.150Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T16:13:04.006Z"}
+{"level":"info","message":"Server listening at port 3333","timestamp":"2018-07-05T23:21:07.689Z"}
+{"level":"info","message":"Connected to mongodb server.","timestamp":"2018-07-05T23:21:07.704Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:21:39.145Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:22:49.691Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:30:57.271Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:30:58.722Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:31:37.702Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:31:39.820Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:31:57.235Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:32:01.231Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:32:08.247Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:32:10.099Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:37:09.900Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-05T23:37:09.907Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-05T23:21:39.079Z\"}","timestamp":"2018-07-05T23:37:09.908Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:37:13.618Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:37:16.376Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:37:18.086Z"}
+{"level":"info","message":"Server listening at port 3333","timestamp":"2018-07-05T23:37:40.367Z"}
+{"level":"info","message":"Connected to mongodb server.","timestamp":"2018-07-05T23:37:40.382Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:38:07.846Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:38:13.530Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:44:28.316Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-05T23:44:28.324Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-05T23:38:07.782Z\"}","timestamp":"2018-07-05T23:44:28.335Z"}
+{"level":"info","message":"Server listening at port 3333","timestamp":"2018-07-05T23:45:50.794Z"}
+{"level":"info","message":"Connected to mongodb server.","timestamp":"2018-07-05T23:45:50.815Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:46:13.995Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:46:17.791Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:48:36.020Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:48:39.462Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:48:48.595Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-05T23:49:00.465Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:36:25.466Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:36:28.978Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:37:27.061Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:37:30.946Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:42:31.052Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:42:36.138Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T00:42:39.583Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:11:14.115Z"}
+{"level":"info","message":"logging in hello2@123.com","timestamp":"2018-07-06T02:11:14.132Z"}
+{"level":"info","message":"logging in 2 hello2@123.com, getUser={\"_id\":\"5970857709e82bd6929db056\",\"displayname\":\"hello2\",\"department\":\"Hello Department\",\"username\":\"hello2@123.com\",\"userType\":0,\"points\":570,\"teamId\":\"2\",\"salt\":\"814e5d282679f6264cab61d42af300a7\",\"password\":\"6ffed52a9e623d0cfd74d88246dfd7529d6555fc4adc249040ae33ae5ddf25eb\",\"login\":\"2018-07-06T00:42:30.948Z\"}","timestamp":"2018-07-06T02:11:14.134Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:12:12.884Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:12:24.370Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:12:27.989Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:34:20.133Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:34:23.402Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:34:27.570Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:38:11.495Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:38:15.466Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T02:38:18.847Z"}
+{"level":"info","message":"00 mark: on 'checklogin', getUser={\"_id\":\"5970857709e82bd6929db056\"}","timestamp":"2018-07-06T03:02:14.337Z"}
