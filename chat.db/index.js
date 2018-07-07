@@ -383,6 +383,9 @@ function getRoom(roomName) {
 }
 exports.getVideos = Q.async(function*(roomName) {
   var room = yield getRoom(roomName);
+  if (!room) {
+    return [];
+  }
   return videoCollection.find({
     roomId: new ObjectID(room._id)
   }).toArray();
@@ -396,6 +399,9 @@ function getPollingMap(videoId, userType) {
 }
 exports.getPollingList = Q.async(function*(videoId, userType) {
   var pollingMap = yield getPollingMap(videoId, userType);
+  if (!pollingMap) {
+    return [];
+  }
   return pollingCollection.find({
     pollingMapId: new ObjectID(pollingMap._id)
   }).toArray();
@@ -429,6 +435,9 @@ exports.createPolling = Q.async(function*(videoId, userType, name, desc, answers
 
 exports.searchPolling = Q.async(function*(videoId, userType, name) {
   var pollingMap = yield getPollingMap(videoId, userType);
+  if (!pollingMap) {
+    return [];
+  }
   var where = {
     pollingMapId: new ObjectID(pollingMap._id)
   };
@@ -436,14 +445,15 @@ exports.searchPolling = Q.async(function*(videoId, userType, name) {
   return pollingCollection.find(where).toArray();
 });
 
-function getPollingChoose(pollingId, userId) {
+function getPollingChoose(pollingId, userId, userType) {
   return pollingChooseCollection.findOne({
     pollingId: new ObjectID(pollingId),
-    userId: new ObjectID(userId)
+    userId: new ObjectID(userId),
+    userType: userType
   })
 }
-exports.isVote = Q.async(function*(pollingId, userId) {
-  var pollingChoose = yield getPollingChoose(pollingId, userId);
+exports.isVote = Q.async(function*(pollingId, userId, userType) {
+  var pollingChoose = yield getPollingChoose(pollingId, userId, userType);
   if (pollingChoose) {
     return true;
   }
@@ -466,8 +476,8 @@ exports.vote = Q.async(function*(pollingId, userId, choose, userType) {
   })
 });
 
-exports.getVote = Q.async(function*(pollingId, userId) {
-  return getPollingChoose(pollingId, userId);
+exports.getVote = Q.async(function*(pollingId, userId, userType) {
+  return getPollingChoose(pollingId, userId, userType);
 });
 
 exports.getVoteCount = Q.async(function*(pollingId, userType) {
