@@ -859,7 +859,6 @@ if (cluster.isMaster) {
     }));
 
     socket.on('getPollingList', Q.async(function*(videoId, userType) {
-      console.log('----', yield chatDb.getPollingList(videoId, userType));
       socket.emit('getPollingList', yield chatDb.getPollingList(videoId, userType));
     }));
 
@@ -900,7 +899,7 @@ if (cluster.isMaster) {
       } else {
         var optionsCount = {};
         for (var i = 0; i < polling.answers.length; i++) {
-          var count = yield chatDb.getVoteOptionsCount(pollingId, userType, polling.answers[i].text);
+          var count = yield chatDb.getVoteOptionsCount(pollingId, userType, polling.answers[i]);
           optionsCount[`${polling.answers[i]}`] = count;
         }
         socket.emit('initVote', {
