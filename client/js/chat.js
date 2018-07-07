@@ -111,18 +111,18 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				console.log($rootScope.data.currVideoId);
 				if($rootScope.data.addquestionName != ''&&$rootScope.data.addquestionDesc != ''){
 					var okey = '';
-					for(var i = 0 ; i < $rootScope.data.createArray.length; i++){
-						if($rootScope.data.createArray[i].text != ''){
+					// for(var i = 0 ; i < $rootScope.data.createArray.length; i++){
+					// 	if($rootScope.data.createArray[i].text != ''){
 							
-						}else{
-							okey = false;
-						}
-					}
-					if(okey){
-						socket.emit("createPolling",$rootScope.data.currVideoId,$rootScope.data.user.userType,$rootScope.data.addquestionName,$rootScope.data.addquestionDesc,$rootScope.data.createArray)	
-					}else{
-						alertbox('输入框不能为空');
-					}
+					// 	}else{
+					// 		okey = false;
+					// 	}
+					// }
+					
+					socket.emit("createPolling",$rootScope.data.currVideoId,$rootScope.data.user.userType,$rootScope.data.addquestionName,$rootScope.data.addquestionDesc,$rootScope.data.createArray)	
+					
+				}else{
+					alertBox('输入框不能为空');
 				}
 				// socket.emit("createPolling",'$rootScope.data.currVideoId', 0, 'dsdsd', '11', ['a', 'b'])
 				// console.log($rootScope.day3Controller.pageData);
@@ -248,6 +248,14 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				if(data){
 					console.log('aa',$rootScope.data.user.userType);
 					$state.go('day1');
+					$rootScope.data.addquestionName = '';
+					$rootScope.data.addquestionDesc = '';
+					
+					for(var i = 0;i < $rootScope.data.createArray.length;i++){
+						$rootScope.data.createArray[i].text = '';
+					}
+					
+
 					
 					// socket.emit('getPollingList',$rootScope.data.currVideoId,$rootScope.data.user.userType);
 					// setTimeout(function(){
