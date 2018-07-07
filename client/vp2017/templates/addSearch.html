@@ -7,13 +7,17 @@
                 <div ng-click="changePage('questionList')" class="goback"><i class="fa fa-angle-left"></i>Back</div>
                 <div class="content col-md-6 mainbody" id="addsearch_content">
                         <div class="page-header">
-                                <h1>创建新投票</h1>
+                                <h1>创建新的问题</h1>
                               </div>
                               <form role="form" ng-submit="createPoll()">
                                 <div class="form-group">
-                                  <label for="pollQuestion">详细信息</label>
-                                  <input type="text" ng-model="data.addquestionName" class="form-control" id="pollQuestion" placeholder="投票详细信息">
+                                  <label for="pollQuestion">问题</label>
+                                  <input type="text" ng-model="data.addquestionName" class="form-control" id="pollQuestion" placeholder="投票题目">
                                 </div>
+                                <div class="form-group">
+                                        <label for="pollQuestion">描述</label>
+                                        <input type="text" ng-model="data.addquestionDesc" class="form-control" id="des" placeholder="投票描述">
+                                      </div>
                                 <div class="form-group">
                                   <label>选项</label>
                                   <div ng-repeat="choice in data.createArray">

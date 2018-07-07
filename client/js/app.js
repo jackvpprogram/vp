@@ -127,6 +127,7 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		questionAlready:true,
 		questionCreateShow:true,
 		addquestionName:'',
+		addquestionDesc:'',
 		createArray:[
 			{ text: '' },
 			{ text: '' },
