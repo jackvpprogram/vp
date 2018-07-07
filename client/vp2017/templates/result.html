@@ -4,34 +4,27 @@
                 <!-- content -->
                 <div class="col-md-2">
                 </div>
-                <div class="content col-md-6 mainbody">
-                    <!-- Blog -->
-                    <div id="blog" class="single-post">
-                        <!-- Post single item-->
-                        <div class="post-item">
-                            <br>
-                            <div class="post-item-wrap" >
-                                    <div ng-click="changePage('questionList')">goback</div>
-                                    <!-- <ul>
-                                        <li ng-repeat="item in pageData.result">
-                                            <input type="radio" name="question" value="" ng-model="pageData.questionAnswer" />
-                                            {{item}}
-                                        </li>
-                                    </ul>
-                                    <button id="test">2222</button> -->
-                                    <div class="progress">
-                                        <div ng-class="['Bar',green]" ng-style="{width:50+'%'}">
-                                            <div>50%</div>
-                                        </div>
+                <div ng-click="changePage('questionList')" class="goback">goback</div>
+                <div class="content col-md-6 mainbody" id="result_content">
+                    <div class="head"></div>
+                    <ul class="answer_box">
+                        <li>
+                            <div class="progress">
+                                <div ng-class="['Bar',green]" ng-style="{width:50+'%'}">
+                                    <div>50%</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                                <div class="progress">
+                                    <div ng-class="['Bar',green]" ng-style="{width:50+'%'}">
+                                        <div>50%</div>
                                     </div>
-                                      
-                                        
-                                          
-                                         
-                                          
-                             </div>
+                                </div>
+                            </li>
+                    </ul>
+                    
                 </div>
-                <!-- end: content -->
             </div>
         </div>
-    </section>
+</section>

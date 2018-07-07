@@ -1,7 +1,41 @@
+
+
+#result_content{
+  margin-top:60px;
+  border-radius: 4px;
+  overflow: hidden
+}
+
+#result_content .head{
+  width:120%;
+  height:60px;
+  background:#dc1f2b;
+  overflow: hidden;
+  margin-left:-10%;
+  
+}
+#result_content{
+  
+}
+.goback{
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+  padding:0 12px;
+  background:#dc1f2b;
+  font-size:14px;
+  color:white;
+  position:absolute;
+  left:10px;
+  top:10px;
+  z-index: 99999;
+  
+}
+
 #test{
     font-size:30px;
 }
-.progress{
+#result_content .progress{
     width:400px;
     border:1px solid #ccc;
     height: 28px;
@@ -11,17 +45,17 @@
     color: #fff;
     overflow: hidden;
   }
-  .Bar{
+#result_content  .Bar{
     width:50%;
     height: 28px;
     background: #5BC0DE;
   }
-  .blue{
+#result_content .blue{
     background: #5BC0DE;
   }
-  .red{
+#result_content  .red{
     background: #D9534F;
   }
-  .green{
+#result_content .green{
     background: green;
   }

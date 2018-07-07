@@ -83,6 +83,12 @@ function Configure($urlRouterProvider, $stateProvider, configData){
 			controller: questionListController,
 			controllerAs: "questionList"
 		})
+		.state("addsearch" , {
+			url: "/addsearch",
+			templateUrl: configData.appPath + "templates/addSearch.html",
+			controller: questionListController,
+			controllerAs: "addsearch"
+		})
 		.state("question" , {
 			url: "/question",
 			templateUrl: configData.appPath + "templates/question.html",
@@ -436,6 +442,21 @@ function questionListController($scope, $timeout, chatService){
 }
 questionListController.$inject = ["$scope", "$timeout", "chatService"];
 
+function addSearchController($scope, $timeout, chatService){
+	ga('send', 'pageview');
+	$timeout(function(){
+		chatService.init()
+		chatService.loadMostLikes(false)
+	}, 500)
+
+	$scope.pageData = {
+		List:[
+			{id:1,content:'11111'},
+			{id:2,content:'2222'}
+		]
+	}
+}
+addSearchController.$inject = ["$scope", "$timeout", "chatService"];
 function questionController($scope, $timeout, chatService){
 	ga('send', 'pageview');
 	$timeout(function(){
