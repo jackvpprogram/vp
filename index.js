@@ -858,38 +858,38 @@ if (cluster.isMaster) {
       socket.emit('getVideos', yield chatDb.getVideos(roomName));
     }));
 
-    socket.on('getPollingList', Q.async(function*(videoId) {
-      console.log('1111');
-      socket.emit('getPollingList', yield chatDb.getPollingList(videoId, usertype));
+    socket.on('getPollingList', Q.async(function*(videoId, userType) {
+      socket.emit('getPollingList', yield chatDb.getPollingList(videoId, userType));
     }));
 
-    socket.on('createPolling', Q.async(function*(videoId, name, desc, answers) {
-      console.log(222);
-      yield chatDb.createPolling(videoId, usertype, name, desc, answers);
+    socket.on('createPolling', Q.async(function*(videoId, userType, name, desc, answers) {
+  
+      yield chatDb.createPolling(videoId, userType, name, desc, answers);
+      // console.log(res)
       socket.emit('createPolling', true);
     }));
 
-    socket.on('searchPolling', Q.async(function*(videoId, name) {
-      socket.emit('searchPolling', yield chatDb.searchPolling(videoId, usertype, name));
+    socket.on('searchPolling', Q.async(function*(videoId, userType, name) {
+      socket.emit('searchPolling', yield chatDb.searchPolling(videoId, userType, name));
     }));
 
-    socket.on('isVote', Q.async(function*(pollingId) {
-      socket.emit('isVote', yield chatDb.isVote(pollingId, userId));
+    socket.on('isVote', Q.async(function*(pollingId, userType) {
+      socket.emit('isVote', yield chatDb.isVote(pollingId, userId, userType));
     }));
 
     socket.on('getPolling', Q.async(function*(pollingId) {
       socket.emit('getPolling', yield chatDb.getPolling(pollingId));
     }));
 
-    socket.on('vote', Q.async(function*(pollingId, choose) {
-      yield chatDb.vote(pollingId, userId, choose, usertype);
+    socket.on('vote', Q.async(function*(pollingId, choose, userType) {
+      yield chatDb.vote(pollingId, userId, choose, userType);
       socket.emit('vote', true);
     }));
 
-    socket.on('initVote', Q.async(function*(pollingId) {
+    socket.on('initVote', Q.async(function*(pollingId, userType) {
       var polling = yield chatDb.getPolling(pollingId);
-      var pollingChoose = yield chatDb.getVote(pollingId, userId);
-      var voteVount = yield chatDb.getVoteCount(pollingId, usertype);
+      var pollingChoose = yield chatDb.getVote(pollingId, userId, userType);
+      var voteVount = yield chatDb.getVoteCount(pollingId, userType);
       if (!pollingChoose) {
         socket.emit('initVote', {
           status: false
@@ -897,7 +897,7 @@ if (cluster.isMaster) {
       } else {
         var optionsCount = [];
         for (var i = 0; i < polling.answers.length; i++) {
-          var count = yield chatDb.getVoteOptionsCount(pollingId, usertype, polling.answers[i]);
+          var count = yield chatDb.getVoteOptionsCount(pollingId, userType, polling.answers[i]);
           optionsCount.push({
             [`${polling.answers[i]}`]: count
           });

@@ -100,7 +100,7 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				console.log('222',$rootScope.data.createArray);
 				console.log('22',$rootScope.data.addquestionName);
 				// socket.emit("createPolling",'5b3f432cb2313d578a81d86b',0,$rootScope.data.addquestionName,'',$rootScope.data.createArray)
-				socket.emit("createPolling",'5b3f432cb2313d578a81d86b', 'dsdsd', '11', ['a', 'b'])
+				socket.emit("createPolling",'5b3f432cb2313d578a81d86b', 0, 'dsdsd', '11', ['a', 'b'])
 				// console.log($rootScope.day3Controller.pageData);
 		
 			}

@@ -11,6 +11,7 @@
 ### getPollingList
   - params
     - videoId：视频ID
+    - userType：当前用户类型
   - response
     - [polling]：问题对象数组
 
@@ -18,6 +19,7 @@
 ### createPolling
   - params
     - videoId：视频ID
+    - userType：当前用户类型
     - name：问题标题
     - desc：问题简述
     - answers：问题答案
@@ -28,6 +30,7 @@
 ### searchPolling
   - params
     - videoId：视频ID
+    - userType：当前用户类型
     - name：问题标题
   - response
     - [polling]：问题对象数组
@@ -36,6 +39,7 @@
 ### isVote
   - params
     - pollingId：问题ID
+    - userType：当前用户类型
   - response
     - true/false
 
@@ -51,6 +55,7 @@
   - params
     - pollingId：问题ID
     - choose：选择的答案
+    - userType：当前用户类型
   - response
     - true：投票成功
 
@@ -58,6 +63,7 @@
 ### initVote
   - params
     - pollingId：问题ID
+    - userType：当前用户类型
   - response
     - status：true/false，false表示初始化投票统计页面失败，如果失败则不返回result
     - result
