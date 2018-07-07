@@ -3,6 +3,10 @@ var userCollection = null;
 var chatCollection = null;
 var roomCollection = null;
 var answerCollection = null;
+const videoCollection = null;
+const pollingMapCollection = null;
+const pollingCollection = null;
+const pollingChooseCollection = null;
 
 var Q = require("q");
 var MongoClient = require("mongodb").MongoClient;
@@ -16,6 +20,10 @@ MongoClient.connect(url, function(err, db) {
   chatCollection = db.collection("chat");
   roomCollection = db.collection("room");
   answerCollection = db.collection("answer");
+  videoCollection = db.collection('video');
+  pollingMapCollection = db.collection('pollingMap');
+  pollingCollection = db.collection('polling');
+  pollingChooseCollection = db.collection('pollingChoose');
 });
 
 exports.getUserId = function(username) {
@@ -366,3 +374,113 @@ exports.loadLB = function(data) {
         points: -1
   }).skip(0).limit(data.limit).toArray();
 };
+
+// polling
+function getRoom(roomName) {
+  return roomCollection.findOne({
+    roomName: roomName
+  })
+}
+exports.getVideos = Q.async(function*(roomName) {
+  let room = yield getRoom(roomName);
+  return videoCollection.find({
+    roomId: new ObjectID(room._id)
+  }).toArray();
+});
+
+function getPollingMap(videoId, userType) {
+  return pollingMapCollection.findOne({
+    videoId: new ObjectID(videoId),
+    userType: userType
+  })
+}
+exports.getPollingList = Q.async(function*(videoId, userType) {
+  let pollingMap = yield getPollingMap(videoId, userType);
+  return pollingCollection.find({
+    pollingMapId: new ObjectID(pollingMap._id)
+  }).toArray();
+});
+
+function findOrCreatePollingMap(videoId, userType) {
+  return pollingMapCollection.findOneAndUpdate({
+    videoId: new ObjectID(videoId),
+    userType: userType
+  }, {
+    $setOnInsert: {
+      videoId: new ObjectID(videoId),
+      userType: userType,
+      createAt: new Date()
+    }
+  }, {
+    upsert: true,
+    returnOriginal: false
+  });
+}
+exports.createPolling = Q.async(function*(videoId, userType, name, desc, answers) {
+  let pollingMap = yield findOrCreatePollingMap(videoId, userType);
+  return pollingCollection.insertOne({
+    pollingMapId: new ObjectID(pollingMap.value._id),
+    name: name,
+    desc: desc,
+    answers: answers,
+    createAt: new Date()
+  })
+});
+
+exports.searchPolling = Q.async(function*(videoId, userType, name) {
+  let pollingMap = yield getPollingMap(videoId, userType);
+  let where = {
+    pollingMapId: new ObjectID(pollingMap._id)
+  };
+  where['name'] = new RegExp(name);
+  return pollingCollection.find(where).toArray();
+});
+
+function getPollingChoose(pollingId, userId) {
+  return pollingChooseCollection.findOne({
+    pollingId: new ObjectID(pollingId),
+    userId: new ObjectID(userId)
+  })
+}
+exports.isVote = Q.async(function*(pollingId, userId) {
+  let pollingChoose = yield getPollingChoose(pollingId, userId);
+  if (pollingChoose) {
+    return true;
+  }
+  return false;
+});
+
+exports.getPolling = Q.async(function*(pollingId) {
+  return pollingCollection.findOne({
+    _id: new ObjectID(pollingId)
+  })
+});
+
+exports.vote = Q.async(function*(pollingId, userId, choose, userType) {
+  return pollingChooseCollection.insertOne({
+    pollingId: new ObjectID(pollingId),
+    userId: new ObjectID(userId),
+    choose: choose,
+    userType: userType,
+    createAt: new Date()
+  })
+});
+
+exports.getVote = Q.async(function*(pollingId, userId) {
+  return getPollingChoose(pollingId, userId);
+});
+
+exports.getVoteCount = Q.async(function*(pollingId, userType) {
+  return pollingChooseCollection.find({
+    pollingId: new ObjectID(pollingId),
+    userType: userType
+  }).count();
+});
+
+exports.getVoteOptionsCount = Q.async(function*(pollingId, userType, choose) {
+  return pollingChooseCollection.find({
+    pollingId: new ObjectID(pollingId),
+    userType: userType,
+    choose: choose
+  }).count();
+});

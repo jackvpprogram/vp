@@ -42,7 +42,7 @@ if (cluster.isMaster) {
     var app = express();
     var upload = require("multer")({
       dest: "uploads/"
-    });    
+    });
     var server = require("http").createServer(app);
     io = require("socket.io")(server);
     var port = process.env.PORT || 3333;
@@ -89,10 +89,10 @@ if (cluster.isMaster) {
     var uploader = new siofu();
     uploader.dir = "./client/images/uploads";
     uploader.listen(socket);
-    
+
     // Do something when a file is saved:
     uploader.on("saved", Q.async(function*(event){
-    		
+
     	var orientation = 1;
     	var pathName = event.file.pathName;
     	var lastIndex = pathName.lastIndexOf("/");
@@ -110,7 +110,7 @@ if (cluster.isMaster) {
     		orientation = ori_orientation;
     		console.log('Orientation was: ' + ori_orientation);
     	});
-    	
+
     	jimp.read(uploader.dir+ '/' +pathName).then(function (image) {
 			// do stuff with the image
 			image.quality(50);
@@ -118,7 +118,7 @@ if (cluster.isMaster) {
 				image.resize(800, jimp.AUTO);
 			if(image.bitmap.height > 800)
 				image.resize(jimp.AUTO, 800);
-			
+
 			switch(orientation) {
 				case 2:
 					image.flip(true, false);
@@ -166,17 +166,17 @@ if (cluster.isMaster) {
       var lbdata = yield chatDb.loadLB(data);
       //io.to("/leaderboard").emit("loadlb", lbdata);
       socket.emit("loadlb", lbdata);
-    }));    
+    }));
 
     socket.on("checkUsername", Q.async(function*(username) {
 
       var getUser = yield chatDb.getUser(username);
-      
+
       var passwordSet = 0;
-      if(getUser) { 
+      if(getUser) {
       	  if(getUser.password)
       	  	  passwordSet = 1;
-      	  else 
+      	  else
       	  	  passwordSet = 0;
       }
       if (getUser == null) {
@@ -198,7 +198,7 @@ if (cluster.isMaster) {
         return;
       }
     }));
-    
+
     // check if already logged in
     socket.on("checklogin", Q.async(function*(username, reconnect) {
 
@@ -222,7 +222,7 @@ if (cluster.isMaster) {
         return;
       }
     }));
-    
+
     // login
     socket.on("login", Q.async(function*(username, roomName) {
 		logger.info("logging in " + username);
@@ -289,10 +289,10 @@ if (cluster.isMaster) {
 				users: rooms[joinedRoom].users
 			});
     }));
-    
+
     // loginWithPasssword
     socket.on("loginWithPassword", Q.async(function*(user, password) {
-    
+
       console.log("loginWithPassword");
       username = user.username;
       if (usernames[username] != null) {	// user logged on another session
@@ -311,13 +311,13 @@ if (cluster.isMaster) {
       	  socket.emit("username not exists");
       	  return;
       }
-      
+
       var randomSalt = "";
       var loginStatus = 0;
       if(user.passwordSet == 1) {	// verify user password
       	  randomSalt = getUser.salt;
       	  console.log("randomSalt1 - " + randomSalt);
-      	  
+
       	  var encryptedPassword = crypto.pbkdf2Sync(password, randomSalt, 100, 32, 'sha256').toString('hex');
       	  console.log("encryptedPassword1 - " + encryptedPassword);
       	  //var dbPassword = yield chatDb.getPassword(username);
@@ -330,47 +330,47 @@ if (cluster.isMaster) {
       	  var encryptedPassword = crypto.pbkdf2Sync(password, randomSalt, 100, 32, 'sha256').toString('hex');
       	  console.log("encryptedPassword2 - " + encryptedPassword);
       	  var setPassword = yield chatDb.setPassword(username, randomSalt, encryptedPassword);
-      	  
+
       	  console.log(setPassword.result);
       	  if(setPassword.result.ok == 1)
       	  	  loginStatus = 1;
       }
-      
+
       console.log("loginStatus " + loginStatus);
       if(loginStatus == 1) { 	//logged in successfully
 		  yield chatDb.updateUserLogintime(username);
 
 		  userId = getUser._id;
 		  usertype = getUser.userType;
-		  
+
 		  console.log("userId " + userId + " , " + username);
 
 		  socket.username = username;
 		  console.log("socket " + socket.username);
 		  usernames[username] = socket;
 		  addedUser = true;
-		  
+
 		  /*
 		  console.log("roomName = " + roomName);
 		  if (roomName == null)
 			roomName = "/menu";
 		  yield joinRoom(roomName);
 		  */
-		  
+
 		  var isadmin = false;
 		  if(username == "admin1@dbs.com" || username == "admin2@dbs.com" || username == "admin3@dbs.com" || username == "admin4@dbs.com" || username == "admin5@dbs.com")
 			  isadmin = true;
-	
+
 		  var d = new Date();
 		  d.setHours(d.getHours() + 8);
-	
+
 		  var dow = d.getDay();
 		  if(dow == 0 || dow == 6)
 			  dow = 1;
 		  dow=5;
-		  
+
 		  console.log("DOW " + dow);
-	
+
 		  socket.emit("login", {
 		    _id: userId,
 			roomName: "/menu",
@@ -397,7 +397,7 @@ if (cluster.isMaster) {
             .toString('hex') 	/** convert to hexadecimal format */
             .slice(0,length);   /** return required number of characters */
     };
-    
+
     var checkPMcount = Q.async(function*(pmlist, offset) {
     	var pmarr = [];
     	for(var i=0;i<pmlist.length;i++) {
@@ -445,14 +445,14 @@ if (cluster.isMaster) {
       if (isAdmin)
         adminSocket = null;
     });
-    
+
     var callRegister = Q.async(function*(username) {
     		//var httpsRequest = require('request');
 			var request = require('request');
 			request('https://dev-dbs-api.3radical.com/api/getCampaigns?uid=47F852F973C140458D9FEC41D63B8BED&campaigns=%5B2979%2C2980%2C2981%2C2982%2C2983%5D&source=web', function (error, response, body) {
-			  console.log('error:', error); // Print the error if one occurred 
-			  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received 
-			  console.log('body:', body); // Print the HTML for the Google homepage. 
+			  console.log('error:', error); // Print the error if one occurred
+			  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+			  console.log('body:', body); // Print the HTML for the Google homepage.
 			});
     });
 
@@ -481,12 +481,12 @@ if (cluster.isMaster) {
       leaveRoom();
       joinedRoom = roomName;
       var users = roomName.split("|");
-      
+
       if(users.length > 1)
       	  yield chatDb.addPMRoom(joinedRoom, users[0], users[1]);
       else
       	  yield chatDb.addRoom(joinedRoom);
-      
+
       if (rooms[roomName] == null) {
         rooms[roomName] = {
           users: {}
@@ -499,7 +499,7 @@ if (cluster.isMaster) {
         username: socket.username,
         users: rooms[joinedRoom].users
       });
-    });    
+    });
 
     function leaveRoom() {
       if (joinedRoom == null) return;
@@ -617,15 +617,15 @@ if (cluster.isMaster) {
       });
       socket.emit("history", yield chatDb.getHistory(joinedRoom, 0, 0, 5, usertype));
     });
-    
+
     var joinPMRoom = Q.async(function*(user1Name) {
-    		
+
       var roomName = "";
       if(user1Name > socket.username)
       	  roomName = socket.username + "|" + user1Name;
-      else 
+      else
       	  roomName = user1Name + "|" + socket.username;
-      
+
       if (joinedRoom == roomName) {
         socket.emit("already joined", roomName);
         return;
@@ -636,10 +636,10 @@ if (cluster.isMaster) {
         roomName: roomName
       });
       socket.emit("history", yield chatDb.getHistory(joinedRoom, 0, 0, 5, usertype));
-    });    
+    });
 
     socket.on("join room", joinRoomAfterLogin);
-    
+
     socket.on("joinPM", joinPMRoom);
 
     var sendProfile = Q.async(function*(username) {
@@ -658,7 +658,7 @@ if (cluster.isMaster) {
       var task2 = chatDb.getMostLikeComments();
       io.to(commentsPage).emit("comments", yield task1, yield task2);
     });
-    
+
     socket.on("like", Q.async(function*(data) {
       var chatId = data.chatId
       joinedRoom = data.joinedRoom
@@ -740,13 +740,13 @@ if (cluster.isMaster) {
       } else
         socket.emit("admin fail");
     });
-    
+
     socket.on("private list", Q.async(function*() {
       var privateRoomList = yield chatDb.getPrivateRoomList(socket.username);
       var pmUser = usernames[socket.username];
       pmUser.emit("private list", privateRoomList);
       checkPMcount(privateRoomList, 0);
-    }));    
+    }));
 
     socket.on("ban", function(user) {
       if (!isAdmin) {
@@ -766,13 +766,13 @@ if (cluster.isMaster) {
       var answerUser = usernames[socket.username];
       answerUser.emit("checkpoll", getAnswer[0]);
     }));
-    
-    socket.on("checkVideo", Q.async(function*(data) {    
+
+    socket.on("checkVideo", Q.async(function*(data) {
       console.log('checking video' + data);
       var getAnswer = yield chatDb.getAnswer(socket.username, data);
       var answerUser = usernames[socket.username];
       answerUser.emit("checkVideo", getAnswer[0]);
-    }));    
+    }));
 
     socket.on("getpollresults", Q.async(function*(data) {
       //logger.info("getpoolresults! " + data.day + ", " + data.question);
@@ -793,7 +793,7 @@ if (cluster.isMaster) {
       var getAnswer = yield chatDb.getAnswer(socket.username, data);
 
       if (getAnswer.length == 0) {
-        // it is a poll, all answers are correct! 
+        // it is a poll, all answers are correct!
         if(data.day == 1) {
         	correctanswer = true;
         } else if (data.day == 2) {
@@ -811,8 +811,8 @@ if (cluster.isMaster) {
         } else if (data.day == 6) {
         	correctanswer = true;
         }
-      } 
-      
+      }
+
       var answerdata = {
         username: socket.username,
         day: data.day,
@@ -825,7 +825,7 @@ if (cluster.isMaster) {
 
       //if(correctanswer == true) {
 	/*
-        if(data.day == 1 && data.question == 2) 
+        if(data.day == 1 && data.question == 2)
         	yield chatDb.updateAnswer(answerdata);
 	else
 	*/
@@ -833,7 +833,7 @@ if (cluster.isMaster) {
 
       if(correctanswer == true) {
         yield chatDb.updateUserpoints(socket.username, answerdata.points);
-      } 
+      }
 
       if (getAnswer.length > 0) {
       	  if(getAnswer[0].answer == data.answer)
@@ -846,11 +846,70 @@ if (cluster.isMaster) {
             answerdata.status = false;
 
       	  answerdata.points = 0;
-      } 
+      }
 
       //io.to(joinedRoom).emit("new answer", answerdata);
       var answerUser = usernames[socket.username];
       answerUser.emit("new answer", answerdata);
+    }));
+
+    // polling
+    socket.on('getVideos', Q.async(function*(roomName) {
+      socket.emit('getVideos', yield chatDb.getVideos(roomName));
+    }));
+
+    socket.on('getPollingList', Q.async(function*(videoId) {
+      socket.emit('getPollingList', yield chatDb.getPollingList(videoId, usertype));
+    }));
+
+    socket.on('createPolling', Q.async(function*(videoId, name, desc, answers) {
+      yield chatDb.createPolling(videoId, usertype, name, desc, answers);
+      socket.emit('createPolling', true);
+    }));
+
+    socket.on('searchPolling', Q.async(function*(videoId, name) {
+      socket.emit('searchPolling', yield chatDb.searchPolling(videoId, usertype, name));
+    }));
+
+    socket.on('isVote', Q.async(function*(pollingId) {
+      socket.emit('isVote', yield chatDb.isVote(pollingId, userId));
+    }));
+
+    socket.on('getPolling', Q.async(function*(pollingId) {
+      socket.emit('getPolling', yield chatDb.getPolling(pollingId));
+    }));
+
+    socket.on('vote', Q.async(function*(pollingId, choose) {
+      yield chatDb.vote(pollingId, userId, choose, usertype);
+      socket.emit('vote', true);
+    }));
+
+    socket.on('initVote', Q.async(function*(pollingId) {
+      let polling = yield chatDb.getPolling(pollingId);
+      let pollingChoose = yield chatDb.getVote(pollingId, userId);
+      let voteVount = yield chatDb.getVoteCount(pollingId, usertype);
+      if (!pollingChoose) {
+        socket.emit('initVote', {
+          status: false
+        });
+      } else {
+        let optionsCount = [];
+        for (let i = 0; i < polling.answers.length; i++) {
+          let count = yield chatDb.getVoteOptionsCount(pollingId, usertype, polling.answers[i]);
+          optionsCount.push({
+            [`${polling.answers[i]}`]: count
+          });
+        }
+        socket.emit('initVote', {
+          status: true,
+          result: {
+            polling,
+            voteVount,
+            pollingChoose,
+            optionsCount
+          }
+        });
+      }
     }));
   });
 }
