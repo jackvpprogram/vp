@@ -885,17 +885,17 @@ if (cluster.isMaster) {
     }));
 
     socket.on('initVote', Q.async(function*(pollingId) {
-      let polling = yield chatDb.getPolling(pollingId);
-      let pollingChoose = yield chatDb.getVote(pollingId, userId);
-      let voteVount = yield chatDb.getVoteCount(pollingId, usertype);
+      var polling = yield chatDb.getPolling(pollingId);
+      var pollingChoose = yield chatDb.getVote(pollingId, userId);
+      var voteVount = yield chatDb.getVoteCount(pollingId, usertype);
       if (!pollingChoose) {
         socket.emit('initVote', {
           status: false
         });
       } else {
-        let optionsCount = [];
-        for (let i = 0; i < polling.answers.length; i++) {
-          let count = yield chatDb.getVoteOptionsCount(pollingId, usertype, polling.answers[i]);
+        var optionsCount = [];
+        for (var i = 0; i < polling.answers.length; i++) {
+          var count = yield chatDb.getVoteOptionsCount(pollingId, usertype, polling.answers[i]);
           optionsCount.push({
             [`${polling.answers[i]}`]: count
           });

@@ -3,10 +3,10 @@ var userCollection = null;
 var chatCollection = null;
 var roomCollection = null;
 var answerCollection = null;
-const videoCollection = null;
-const pollingMapCollection = null;
-const pollingCollection = null;
-const pollingChooseCollection = null;
+var videoCollection = null;
+var pollingMapCollection = null;
+var pollingCollection = null;
+var pollingChooseCollection = null;
 
 var Q = require("q");
 var MongoClient = require("mongodb").MongoClient;
@@ -382,7 +382,7 @@ function getRoom(roomName) {
   })
 }
 exports.getVideos = Q.async(function*(roomName) {
-  let room = yield getRoom(roomName);
+  var room = yield getRoom(roomName);
   return videoCollection.find({
     roomId: new ObjectID(room._id)
   }).toArray();
@@ -395,7 +395,7 @@ function getPollingMap(videoId, userType) {
   })
 }
 exports.getPollingList = Q.async(function*(videoId, userType) {
-  let pollingMap = yield getPollingMap(videoId, userType);
+  var pollingMap = yield getPollingMap(videoId, userType);
   return pollingCollection.find({
     pollingMapId: new ObjectID(pollingMap._id)
   }).toArray();
@@ -417,7 +417,7 @@ function findOrCreatePollingMap(videoId, userType) {
   });
 }
 exports.createPolling = Q.async(function*(videoId, userType, name, desc, answers) {
-  let pollingMap = yield findOrCreatePollingMap(videoId, userType);
+  var pollingMap = yield findOrCreatePollingMap(videoId, userType);
   return pollingCollection.insertOne({
     pollingMapId: new ObjectID(pollingMap.value._id),
     name: name,
@@ -428,8 +428,8 @@ exports.createPolling = Q.async(function*(videoId, userType, name, desc, answers
 });
 
 exports.searchPolling = Q.async(function*(videoId, userType, name) {
-  let pollingMap = yield getPollingMap(videoId, userType);
-  let where = {
+  var pollingMap = yield getPollingMap(videoId, userType);
+  var where = {
     pollingMapId: new ObjectID(pollingMap._id)
   };
   where['name'] = new RegExp(name);
@@ -443,7 +443,7 @@ function getPollingChoose(pollingId, userId) {
   })
 }
 exports.isVote = Q.async(function*(pollingId, userId) {
-  let pollingChoose = yield getPollingChoose(pollingId, userId);
+  var pollingChoose = yield getPollingChoose(pollingId, userId);
   if (pollingChoose) {
     return true;
   }
