@@ -31,7 +31,12 @@
     left:10px;
     top:10px;
     z-index: 99999;
-    
+}
+#question_content .goback:hover{
+    background:#26B8F3;
+  }
+.goback .fa{
+    margin-right:5px; 
 }
 #question_content .list label{
     display: block;
@@ -40,5 +45,5 @@
     margin-right:10px;
 
 
-    
+
 }

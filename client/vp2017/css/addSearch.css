@@ -1,21 +1,25 @@
+#search{
+    min-height:400px;
 
-#questionList_content{
+}
+
+#addsearch_content{
     margin-top:60px;
     border-radius: 4px;
-    overflow: hidden
-}
-.head{
+    overflow: hidden;
+    min-height:300px;
+  
+  }
+  
+  /* #addsearch_content .head{
     width:120%;
     height:60px;
     background:#dc1f2b;
     overflow: hidden;
     margin-left:-10%;
     
-}
-#questionList{
-    
-}
- .goback{
+  } */
+  .goback{
     display:inline-block;
     height:40px;
     line-height:40px;
@@ -27,11 +31,13 @@
     left:10px;
     top:10px;
     z-index: 99999;
-     
-}
-.goback:hover{
+    margin-left:5px;
+  }
+  .goback:hover{
     background:#26B8F3;
-}
-.goback .fa{
+  }
+  .goback .fa{
     margin-right:5px; 
-}
+  }
+  
+ 

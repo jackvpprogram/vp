@@ -1,30 +1,44 @@
-<!-- Content -->
-<section>
+<section class="sidebar-right">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
+            <div class="row" id="search">
+                <!-- content -->
+                <div class="col-md-2">
                 </div>
-                <div class="col-md-6 mainbody"></div>
-                <br>
-                <h2 class="text-center">You're In!</h2>
-                <div class="heading text-left">
-                    <span class="lead">Congratulations for embarking on this journey of reimagining banking! Over the next few days, you will hear from Group CEO Piyush Gupta,  Sim S. Lim, our Singapore Country Head and members of his management committee, as well as some of your peers.
-                    <br /><br/>
-                    Ready? Let’s begin!
-                    <br />
-                    <a href="" ng-click="changePage('menu')" type="button" class="btn btn-primary loginBtn" style="float:right">Next</a>
-                    </span>
-                </div>
-                <div class="text-right lead"></div>
-                <br>
-                <div class="col-md-3"></div>
-                <!-- end: Portfolio: Image Zoom -->
-                <div style="padding: 0">
-                    <img class="img-responsive" src="images/DBS_header.jpg"/>
+                <div ng-click="changePage('questionList')" class="goback"><i class="fa fa-angle-left"></i>Back</div>
+                <div class="content col-md-6 mainbody" id="addsearch_content">
+                        <div class="page-header">
+                                <h1>创建新投票</h1>
+                              </div>
+                              <form role="form" ng-submit="createPoll()">
+                                <div class="form-group">
+                                  <label for="pollQuestion">详细信息</label>
+                                  <input type="text" ng-model="poll.question" class="form-control" id="pollQuestion" placeholder="投票详细信息">
+                                </div>
+                                <div class="form-group">
+                                  <label>选项</label>
+                                  <div ng-repeat="choice in data.createArray">
+                                    <input type="text" ng-model="choice.text" class="form-control" placeholder="选项{{$index+1}}"><br>
+                                  </div>
+                                </div>    
+                                <div class="row">
+                                  <!-- <div class="col-xs-12">
+                                     <button type="button" class="btn btn-default" ng-click="addChoice()"><span class="glyphicon glyphicon-plus"></span> 增加选项</button>
+                                  </div> -->
+                                </div>
+                                <p><hr></p>
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <a href="" ng-click="changePage('questionList')" class="btn btn-default" role="button"><span class="glyphicon glyphicon-arrow-left"></span> 返回列表</a>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <button class="btn btn-primary pull-right" type="submit" ng-click="questionNew();">创建 &raquo;</button>
+                                  </div>
+                                </div>
+                                <p>&nbsp;</p>
+                              </form>
+                   
+                    
                 </div>
             </div>
         </div>
-    </section>
-    <!-- end: Content -->
-    <!--<a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a>-->
-    
+</section>

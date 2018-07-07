@@ -4,12 +4,12 @@
                 <!-- content -->
                 <div class="col-md-2">
                 </div>
-                <div class="goback" ng-click="questionGoback()">goback</div>
+                <div class="goback" ng-click="questionGoback()"><i class="fa fa-angle-left"></i>Back</div>
                 <div class="content col-md-6 mainbody" id="questionList_content">
                     <div class="head"></div>
 
                             <div class="post-item-wrap" id="questionList">
-                                <div ng-click="changePage('addsearch')">create</div>
+                                <div ng-if='data.questionCreateShow' ng-click="changePage('addsearch')">create</div>
                                     
                                     <ul >
                                        

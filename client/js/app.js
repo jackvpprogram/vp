@@ -118,7 +118,15 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		},
 		comments: [],
 		currentReply: "",
-		currentCommentReplies: []
+		currentCommentReplies: [],
+		questionAlready:true,
+		questionCreateShow:true,
+		createArray:[
+			{ text: '' },
+			{ text: '' },
+			{ text: '' },
+			{ text: '' }
+		]
 	}
 
 	//$rootScope.$on("stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
@@ -132,6 +140,10 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		//返回上一级路由
 		// console.log('back11');
 		history.go(-1);
+
+	}
+	$rootScope.questionNew = function(){
+		console.log('222',$rootScope.data.createArray);
 
 	}
 	//判断跳转权限问题
@@ -151,6 +163,11 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 	}
 
 	$rootScope.changePage = function(pageState){
+		console.log('当前用户权限',$rootScope.data.user.userType)
+		//
+		// if(pageState == 'questionList' && $rootScope.data.questionAlready == true){
+		// 	pageState = 'result';
+		// }
 		$state.go(pageState)
 
 		console.log("changePage() to=" + pageState)
