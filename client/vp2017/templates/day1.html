@@ -28,12 +28,16 @@
                             </div>
 
                             <div ng-if="pageData.day != 5" class="post-video">
-                                <video ng-repeat="video in pageData.videos" class="day-video" width="100%" ng-attr-poster="{{video.poster}}" controls>
-                                    <source ng-src="{{video.src}}" type="video/mp4" />
-                                    Your browser does not support HTML5 video.
-                                </video>
-                                <div id="questionquiz" ng-if="pageData.question != true" ng-click="gotoquestionList('1a')" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:10000;margin:0 auto;padding:0 12px;">take a quiz</div>
-                                
+                                <div ng-repeat="video in pageData.videos"> 
+                                    <video  class="day-video" width="100%" ng-attr-poster="{{video.poster}}" controls>
+                                        <source ng-src="{{video.src}}" type="video/mp4" />
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                    <div id="questionquiz" ng-if="pageData.question != true" ng-click="gotoquestionList(video.videoId)" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:10000;margin:0 auto;padding:0 12px;position: absolute;
+                                    bottom: -150px;">take a quiz</div>
+                                            
+                                </div>
+                              
                                 
                             </div>
 

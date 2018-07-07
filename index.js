@@ -902,6 +902,7 @@ if (cluster.isMaster) {
           var count = yield chatDb.getVoteOptionsCount(pollingId, userType, polling.answers[i]);
           optionsCount[`${polling.answers[i]}`] = count;
         }
+        console.log(optionsCount);
         socket.emit('initVote', {
           status: true,
           result: {

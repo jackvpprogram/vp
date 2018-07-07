@@ -216,7 +216,7 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 					for(var i in data.result.optionsCount){
 						var temp = {};
 						temp.name = i;
-						temp.num = data.result.optionsCount[i],
+						temp.num = Math.floor(data.result.optionsCount[i]/data.result.voteVount)*100,
 						
 						temp.total = data.result.voteVount
 						$rootScope.data.questionResultArray.push(temp);
