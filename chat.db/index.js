@@ -3,7 +3,6 @@ var userCollection = null;
 var chatCollection = null;
 var roomCollection = null;
 var answerCollection = null;
-var videoCollection = null;
 var pollingMapCollection = null;
 var pollingCollection = null;
 var pollingChooseCollection = null;
@@ -20,7 +19,6 @@ MongoClient.connect(url, function(err, db) {
   chatCollection = db.collection("chat");
   roomCollection = db.collection("room");
   answerCollection = db.collection("answer");
-  videoCollection = db.collection('video');
   pollingMapCollection = db.collection('pollingMap');
   pollingCollection = db.collection('polling');
   pollingChooseCollection = db.collection('pollingChoose');
@@ -376,24 +374,24 @@ exports.loadLB = function(data) {
 };
 
 // polling
-function getRoom(roomName) {
-  return roomCollection.findOne({
-    roomName: roomName
-  })
-}
-exports.getVideos = Q.async(function*(roomName) {
-  var room = yield getRoom(roomName);
-  if (!room) {
-    return [];
-  }
-  return videoCollection.find({
-    roomId: new ObjectID(room._id)
-  }).toArray();
-});
+// function getRoom(roomName) {
+//   return roomCollection.findOne({
+//     roomName: roomName
+//   })
+// }
+// exports.getVideos = Q.async(function*(roomName) {
+//   var room = yield getRoom(roomName);
+//   if (!room) {
+//     return [];
+//   }
+//   return videoCollection.find({
+//     roomId: new ObjectID(room._id)
+//   }).toArray();
+// });
 
 function getPollingMap(videoId, userType) {
   return pollingMapCollection.findOne({
-    videoId: new ObjectID(videoId),
+    videoId: videoId,
     userType: userType
   })
 }
@@ -409,11 +407,11 @@ exports.getPollingList = Q.async(function*(videoId, userType) {
 
 function findOrCreatePollingMap(videoId, userType) {
   return pollingMapCollection.findOneAndUpdate({
-    videoId: new ObjectID(videoId),
+    videoId: videoId,
     userType: userType
   }, {
     $setOnInsert: {
-      videoId: new ObjectID(videoId),
+      videoId: videoId,
       userType: userType,
       createAt: new Date()
     }
