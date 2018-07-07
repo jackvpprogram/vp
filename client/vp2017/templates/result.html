@@ -8,20 +8,15 @@
                 <div class="content col-md-6 mainbody" id="result_content">
                     <div class="head"></div>
                     <ul class="answer_box">
-                        <li>
+                        <li ng-repeat="item in data.questionResultArray.optionsCount">
+                            <span>{{item.}}</span>
                             <div class="progress">
                                 <div ng-class="['Bar',green]" ng-style="{width:50+'%'}">
                                     <div>50%</div>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                                <div class="progress">
-                                    <div ng-class="['Bar',green]" ng-style="{width:50+'%'}">
-                                        <div>50%</div>
-                                    </div>
-                                </div>
-                            </li>
+                       
                     </ul>
                     
                 </div>

@@ -395,6 +395,7 @@ function getPollingMap(videoId, userType) {
   })
 }
 exports.getPollingList = Q.async(function*(videoId, userType) {
+  console.log('22222');
   var pollingMap = yield getPollingMap(videoId, userType);
   return pollingCollection.find({
     pollingMapId: new ObjectID(pollingMap._id)
@@ -417,7 +418,8 @@ function findOrCreatePollingMap(videoId, userType) {
   });
 }
 exports.createPolling = Q.async(function*(videoId, userType, name, desc, answers) {
-  var pollingMap = yield findOrCreatePollingMap(videoId, userType);
+  var pollingoMap = yield findOrCreatePollingMap(videoId, userType);
+  console.log('=======', videoId, userType, name, desc, answers);
   return pollingCollection.insertOne({
     pollingMapId: new ObjectID(pollingMap.value._id),
     name: name,

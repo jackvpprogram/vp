@@ -859,10 +859,12 @@ if (cluster.isMaster) {
     }));
 
     socket.on('getPollingList', Q.async(function*(videoId) {
+      console.log('1111');
       socket.emit('getPollingList', yield chatDb.getPollingList(videoId, usertype));
     }));
 
     socket.on('createPolling', Q.async(function*(videoId, name, desc, answers) {
+      console.log(222);
       yield chatDb.createPolling(videoId, usertype, name, desc, answers);
       socket.emit('createPolling', true);
     }));

@@ -13,12 +13,13 @@
                         <input type="radio" name="question" value="1" ng-model="pageData.questionAnswer" />
                         {{item}}
                     </li> -->
-                    <label ng-repeat="item in pageData.questionList">
+                    <div>{{data.questionArray.name}}</div>
+                    <label ng-repeat="item in data.questionArray.answers">
                         <input type="radio" name="demo" value="{{item}}" ng-model="$parent.demo">{{item}}
                     </label>
-                    <h1>{{demo}}</h1>
+                    <!-- <h1>{{demo}}</h1> -->
                 </ul>
-                <button ng-click="changePage('result')">提交</button>         
+                <button class="submitVote" ng-click="questionVote(demo)">提交</button>         
                 </div>
 
             </div>

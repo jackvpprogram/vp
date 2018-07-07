@@ -71,7 +71,43 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				}
 			});
 
+			//jack
+			//btn quiz
+			$("#questionquiz").on("click",function(){
+				socket.emit('getPollingList', '5b3f432cb2313d578a81d86b');
+				
+			})
+			//question skip
+			// $(".questionListItem").on("click",function(val){
+			// 	console.log($rootScope);
+				
+			// 	// $state.go('question');
+
+
+			// })
+			$rootScope.skipquestion = function(val){
+				console.log(val);
+				$rootScope.data.questionArray = val;
+				$state.go('question');
+			}
+			$rootScope.questionVote = function(val){
+				console.log(val);
+				console.log( 'sss',$rootScope.data.questionArray._id);
+				socket.emit("vote",$rootScope.data.questionArray._id,val)
+				// $state.go('result');
+			}
+			$rootScope.questionNew = function(){
+				console.log('222',$rootScope.data.createArray);
+				console.log('22',$rootScope.data.addquestionName);
+				// socket.emit("createPolling",'5b3f432cb2313d578a81d86b',0,$rootScope.data.addquestionName,'',$rootScope.data.createArray)
+				socket.emit("createPolling",'5b3f432cb2313d578a81d86b', 'dsdsd', '11', ['a', 'b'])
+				// console.log($rootScope.day3Controller.pageData);
+		
+			}
+
+
 			$(".loginBtn").on("click", function () {
+				
 				if(currentLoc == "login"){
 					checkUsername();
 				}
@@ -146,7 +182,47 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 
 		bindSocketEvents()
 		function bindSocketEvents(){
+			socket.on("getPollingList",function(data){
+				console.log(data);
+				$rootScope.data.questionNameArray = [];
+				for(var i = 0 ;i < data.length; i++){
+					$rootScope.data.questionNameArray.push({name:data[i].name,info:data[i]})
+				}
+				
+				console.log('11',$rootScope.data.questionArray);
+				$state.go('questionList');
+			})
+			socket.on("vote",function(data){
+				console.log(data);
+				if(data){
+					socket.emit("initVote",$rootScope.data.questionArray._id);
+					
+					
+
+				}
+			})
+			socket.on("initVote",function(data){
+				console.log('333',data);
+				$rootScope.data.questionResultArray = [];
+				for(var i in data.result.optionsCount){
+					// var temp = {};
+					// temp.name = i;
+					// temp.num = data.result.optionsCount[i],
+					
+					// temp.total = data.result.voteVount
+					$rootScope.data.questionResultArray.push(temp);
+				}
+				console.log($rootScope.data.questionResultArray);
+
+				$state.go('result');
+			})
+			socket.on("createPolling",function(data){
+				console.log(data);
+			})
 			socket.on("login", function (data) {
+				// console.log('111',data);
+				$rootScope.jack_userType = data.userType;
+				console.log($rootScope.jack_userType);
 				$rootScope.updateHasLogin(true)
 				console.log("in login..." + data.username);
 				username = data.username;
@@ -741,7 +817,13 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				$mostLikes.html(chatString);
 			});
 		}
+		//begin 
+		// function quiz(){
+			// socket.emit("getPollingList",'5b3f432cb2313d578a81d86b')
+		// }
 
+
+		///jacklin
 		function getCurrentLoc(){
 			var locArray = $state.current.name.split(".")
 			console.log("=== 00 mark: getCurrentLoc: " + locArray[locArray.length - 1]);
@@ -798,6 +880,7 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				$("#mark").show();
 			}
 		}
+
 
 		function checkUsername() {
 			console.log("checkUsername");

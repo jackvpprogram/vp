@@ -116,11 +116,16 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 			userType: 1,
 			isAdmin: false
 		},
+		jack_userType:null,
 		comments: [],
 		currentReply: "",
 		currentCommentReplies: [],
+		questionNameArray:[],
+		questionArray:[],
+		questionResultArray:[],
 		questionAlready:true,
 		questionCreateShow:true,
+		addquestionName:'',
 		createArray:[
 			{ text: '' },
 			{ text: '' },
@@ -136,16 +141,22 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 	 /**
 	  * test
 	  */
+	//  $rootScope.testquiz = function(){
+	// 	$state.go('questionList');
+	//  }
 	$rootScope.questionGoback = function(){
 		//返回上一级路由
 		// console.log('back11');
 		history.go(-1);
 
 	}
-	$rootScope.questionNew = function(){
-		console.log('222',$rootScope.data.createArray);
+	// $rootScope.questionNew = function(){
+	// 	console.log('222',$rootScope.data.createArray);
+	// 	console.log('22',$rootScope.data.addquestionName);
+	// 	socket.emit("createPolling",'5b3f432cb2313d578a81d86b',$rootScope.data.addquestionName,'',$rootScope.data.createArray)
+	// 	// console.log($rootScope.day3Controller.pageData);
 
-	}
+	// }
 	//判断跳转权限问题
 	// $rootScope.questionPower = function(val){
 	// 	switch(Number(val)){

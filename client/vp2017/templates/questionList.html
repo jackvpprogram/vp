@@ -9,12 +9,12 @@
                     <div class="head"></div>
 
                             <div class="post-item-wrap" id="questionList">
-                                <div ng-if='data.questionCreateShow' ng-click="changePage('addsearch')">create</div>
+                                <div ng-if="jack_userType == 0" ng-click="changePage('addsearch')">create</div>
                                     
                                     <ul >
                                        
-                                        <li ng-repeat="item in pageData.List">
-                                           <a href="" ng-click="changePage('question')">{{item.content}}</a>
+                                        <li ng-repeat="item in data.questionNameArray">
+                                           <a href="" class="questionListItem" ng-click="skipquestion(item.info)">{{item.name}}</a>
                                         </li>
                                     </ul>
                             </div>
