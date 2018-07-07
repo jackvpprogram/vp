@@ -863,8 +863,13 @@ if (cluster.isMaster) {
     }));
 
     socket.on('createPolling', Q.async(function*(videoId, userType, name, desc, answers) {
-  
-      yield chatDb.createPolling(videoId, userType, name, desc, answers);
+      var _answers = [];
+      answers.forEach(answer => {
+        _answers.push({
+          text: answer.text
+        })
+      });
+      yield chatDb.createPolling(videoId, userType, name, desc, _answers);
       // console.log(res)
       socket.emit('createPolling', true);
     }));
@@ -897,9 +902,9 @@ if (cluster.isMaster) {
       } else {
         var optionsCount = [];
         for (var i = 0; i < polling.answers.length; i++) {
-          var count = yield chatDb.getVoteOptionsCount(pollingId, userType, polling.answers[i]);
+          var count = yield chatDb.getVoteOptionsCount(pollingId, userType, polling.answers[i].text);
           optionsCount.push({
-            [`${polling.answers[i]}`]: count
+            [`${polling.answers[i].text}`]: count
           });
         }
         socket.emit('initVote', {
