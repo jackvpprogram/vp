@@ -32,6 +32,9 @@
                                     <source ng-src="{{video.src}}" type="video/mp4" />
                                     Your browser does not support HTML5 video.
                                 </video>
+                                <div id="questionquiz" ng-if="pageData.question != true" ng-click="gotoquestionList('1a')" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:10000;margin:0 auto;padding:0 12px;">take a quiz</div>
+                                
+                                
                             </div>
 
                             <!-- todo: change this dummy video -->
@@ -52,7 +55,7 @@
                                 <div class="post-next-title"><span>Day {{pageData.day + 1}}</span>{{pageData.nextBtnText}}</div>
                                 </a>
                             </div>
-                            <div id="questionquiz" ng-if="pageData.question != true" ng-click="testquiz()" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:100;margin:0 auto;padding:0 12px;">take a quiz</div>
+                            <!-- <div id="questionquiz" ng-if="pageData.question != true" ng-click="testquiz()" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:100;margin:0 auto;padding:0 12px;">take a quiz</div> -->
                             <br><br>
                             <hr>
                             <div class="lead">

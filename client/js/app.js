@@ -120,6 +120,7 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		comments: [],
 		currentReply: "",
 		currentCommentReplies: [],
+		currVideoId:'',
 		questionNameArray:[],
 		questionArray:[],
 		questionResultArray:[],
@@ -153,7 +154,7 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 	// $rootScope.questionNew = function(){
 	// 	console.log('222',$rootScope.data.createArray);
 	// 	console.log('22',$rootScope.data.addquestionName);
-	// 	socket.emit("createPolling",'5b3f432cb2313d578a81d86b',$rootScope.data.addquestionName,'',$rootScope.data.createArray)
+	// 	socket.emit("createPolling",'$rootScope.data.currVideoId',$rootScope.data.addquestionName,'',$rootScope.data.createArray)
 	// 	// console.log($rootScope.day3Controller.pageData);
 
 	// }
@@ -358,7 +359,7 @@ function day1Controller($scope, $timeout, chatService){
 		text1: "What makes DBS the World's Best Digital Bank? Our digital transformation pervades every part of the bank. We are driven by one relentless purpose, which is to live and breathe innovation to Make Banking Joyful. It starts with reimagining banking.",
 		text2: "What can we do to help DBS on this quest? Watch this video to hear what Sim and members of his management team have to say.",
 		videos: [
-			{poster: "vp2017/images/day1vid1.png", src: "https://s3-ap-southeast-1.amazonaws.com/dbsvp2017/DBS_Reimagine_Banking_Day_1_Video_170721.mp4"}
+			{videoId:'1a', poster: "vp2017/images/day1vid1.png", src: "https://s3-ap-southeast-1.amazonaws.com/dbsvp2017/DBS_Reimagine_Banking_Day_1_Video_170721.mp4"}
 		],
 		previousBtnText: "",
 		nextBtnText: "Reimagine the Way We Work",

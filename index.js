@@ -859,7 +859,7 @@ if (cluster.isMaster) {
     }));
 
     socket.on('getPollingList', Q.async(function*(videoId, userType) {
-      console.log(userType);
+      console.log('----', yield chatDb.getPollingList(videoId, userType));
       socket.emit('getPollingList', yield chatDb.getPollingList(videoId, userType));
     }));
 

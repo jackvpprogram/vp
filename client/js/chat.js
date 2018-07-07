@@ -73,11 +73,16 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 
 			//jack
 			//btn quiz
-			$("#questionquiz").on("click",function(){
+			$rootScope.gotoquestionList = function(val){
+				console.log('333',val);
+				$rootScope.data.currVideoId = val;
+				socket.emit('getPollingList', $rootScope.data.currVideoId,$rootScope.data.user.userType);
+			}
+			// $("#questionquiz").on("click",function(){
 				
-				socket.emit('getPollingList', '5b3f432cb2313d578a81d86b',$rootScope.data.user.userType);
 				
-			})
+				
+			// })
 			//question skip
 			// $(".questionListItem").on("click",function(val){
 			// 	console.log($rootScope);
@@ -87,7 +92,8 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 
 			// })
 			$rootScope.skipquestion = function(val){
-				console.log(val);
+				console.log();
+				console.log('444',val);
 				$rootScope.data.questionArray = val;
 				socket.emit("isVote",val._id,$rootScope.data.user.userType)
 				// $state.go('question');
@@ -95,14 +101,16 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			$rootScope.questionVote = function(val){
 				console.log(val);
 				console.log( 'sss',$rootScope.data.questionArray._id);
-				socket.emit("vote",$rootScope.data.questionArray._id,val)
+				socket.emit("vote",$rootScope.data.questionArray._id,val,$rootScope.data.user.userType);
 				
 			}
 			$rootScope.questionNew = function(){
-				console.log('222',$rootScope.data.createArray);
-				console.log('22',$rootScope.data.addquestionName);
-				socket.emit("createPolling",'5b3f432cb2313d578a81d86b',0,$rootScope.data.addquestionName,'',$rootScope.data.createArray)
-				// socket.emit("createPolling",'5b3f432cb2313d578a81d86b', 0, 'dsdsd', '11', ['a', 'b'])
+				// console.log('222',$rootScope.data.createArray);
+				// console.log('22',$rootScope.data.addquestionName);
+				console.log('send',$rootScope.data.user.userType);
+				console.log($rootScope.data.currVideoId);
+				socket.emit("createPolling",$rootScope.data.currVideoId,$rootScope.data.user.userType,$rootScope.data.addquestionName,'',$rootScope.data.createArray)
+				// socket.emit("createPolling",'$rootScope.data.currVideoId', 0, 'dsdsd', '11', ['a', 'b'])
 				// console.log($rootScope.day3Controller.pageData);
 		
 			}
@@ -185,7 +193,7 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 		bindSocketEvents()
 		function bindSocketEvents(){
 			socket.on("getPollingList",function(data){
-				console.log(data);
+				console.log('=====', data);
 				$rootScope.data.questionNameArray = [];
 				for(var i = 0 ;i < data.length; i++){
 					$rootScope.data.questionNameArray.push({name:data[i].name,info:data[i]})
@@ -203,21 +211,35 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			})
 			socket.on("initVote",function(data){
 				console.log('333',data);
-				$rootScope.data.questionResultArray = [];
-				for(var i in data.result.optionsCount){
-					var temp = {};
-					temp.name = i;
-					temp.num = data.result.optionsCount[i],
-					
-					temp.total = data.result.voteVount
-					$rootScope.data.questionResultArray.push(temp);
-				}
-				console.log($rootScope.data.questionResultArray);
+				if(data.status){
+					$rootScope.data.questionResultArray = [];
+					for(var i in data.result.optionsCount){
+						var temp = {};
+						temp.name = i;
+						temp.num = data.result.optionsCount[i],
+						
+						temp.total = data.result.voteVount
+						$rootScope.data.questionResultArray.push(temp);
+					}
+					console.log($rootScope.data.questionResultArray);
 
-				// $state.go('result');
+					$state.go('result');
+				}else{
+
+				}
+				
 			})
 			socket.on("createPolling",function(data){
 				console.log(data);
+				if(data){
+					console.log('aa',$rootScope.data.user.userType);
+					socket.emit('getPollingList',$rootScope.data.currVideoId,$rootScope.data.user.userType);
+					// setTimeout(function(){
+					// 	// $state.go('questionList');
+					// },500)
+				}else{
+					console.log('创建失败');
+				}
 			})
 			socket.on("isVote",function(data){
 				console.log(data);
@@ -226,7 +248,10 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 					// $state.go('result');
 					
 				}else{
-					$state.go('question');
+					setTimeout(function(){
+						$state.go('question');
+					},500)
+					
 				}
 
 			})
@@ -830,7 +855,7 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 		}
 		//begin 
 		// function quiz(){
-			// socket.emit("getPollingList",'5b3f432cb2313d578a81d86b')
+			// socket.emit("getPollingList",'$rootScope.data.currVideoId')
 		// }
 
 
