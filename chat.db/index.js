@@ -398,7 +398,6 @@ function getPollingMap(videoId, userType) {
   })
 }
 exports.getPollingList = Q.async(function*(videoId, userType) {
-  console.log('22222');
   var pollingMap = yield getPollingMap(videoId, userType);
   if (!pollingMap) {
     return [];

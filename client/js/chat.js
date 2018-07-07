@@ -74,7 +74,8 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			//jack
 			//btn quiz
 			$("#questionquiz").on("click",function(){
-				socket.emit('getPollingList', '5b3f432cb2313d578a81d86b');
+				
+				socket.emit('getPollingList', '5b3f432cb2313d578a81d86b',$rootScope.data.user.userType);
 				
 			})
 			//question skip
@@ -88,19 +89,20 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			$rootScope.skipquestion = function(val){
 				console.log(val);
 				$rootScope.data.questionArray = val;
-				$state.go('question');
+				socket.emit("isVote",val._id,$rootScope.data.user.userType)
+				// $state.go('question');
 			}
 			$rootScope.questionVote = function(val){
 				console.log(val);
 				console.log( 'sss',$rootScope.data.questionArray._id);
 				socket.emit("vote",$rootScope.data.questionArray._id,val)
-				// $state.go('result');
+				
 			}
 			$rootScope.questionNew = function(){
 				console.log('222',$rootScope.data.createArray);
 				console.log('22',$rootScope.data.addquestionName);
-				// socket.emit("createPolling",'5b3f432cb2313d578a81d86b',0,$rootScope.data.addquestionName,'',$rootScope.data.createArray)
-				socket.emit("createPolling",'5b3f432cb2313d578a81d86b', 0, 'dsdsd', '11', ['a', 'b'])
+				socket.emit("createPolling",'5b3f432cb2313d578a81d86b',0,$rootScope.data.addquestionName,'',$rootScope.data.createArray)
+				// socket.emit("createPolling",'5b3f432cb2313d578a81d86b', 0, 'dsdsd', '11', ['a', 'b'])
 				// console.log($rootScope.day3Controller.pageData);
 		
 			}
@@ -193,31 +195,40 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				$state.go('questionList');
 			})
 			socket.on("vote",function(data){
-				console.log(data);
+				console.log('vote',data);
 				if(data){
-					socket.emit("initVote",$rootScope.data.questionArray._id);
+					socket.emit("initVote",$rootScope.data.questionArray._id,$rootScope.data.user.userType);
 					
-					
-
 				}
 			})
 			socket.on("initVote",function(data){
 				console.log('333',data);
 				$rootScope.data.questionResultArray = [];
 				for(var i in data.result.optionsCount){
-					// var temp = {};
-					// temp.name = i;
-					// temp.num = data.result.optionsCount[i],
+					var temp = {};
+					temp.name = i;
+					temp.num = data.result.optionsCount[i],
 					
-					// temp.total = data.result.voteVount
+					temp.total = data.result.voteVount
 					$rootScope.data.questionResultArray.push(temp);
 				}
 				console.log($rootScope.data.questionResultArray);
 
-				$state.go('result');
+				// $state.go('result');
 			})
 			socket.on("createPolling",function(data){
 				console.log(data);
+			})
+			socket.on("isVote",function(data){
+				console.log(data);
+				if(data){
+					socket.emit("initVote",$rootScope.data.questionArray._id,$rootScope.data.user.userType)
+					// $state.go('result');
+					
+				}else{
+					$state.go('question');
+				}
+
 			})
 			socket.on("login", function (data) {
 				// console.log('111',data);
