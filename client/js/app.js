@@ -133,7 +133,8 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 			{ text: '' },
 			{ text: '' },
 			{ text: '' }
-		]
+		],
+		resultBackInfo:null,
 	}
 
 	//$rootScope.$on("stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
@@ -168,6 +169,21 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 
 	// 	}
 	// }
+
+	$rootScope.showVPbtn = function(){
+		var ourl = window.location.href;
+		var tempArr = ourl.split('/');
+		var pathName = tempArr[tempArr.length-1];
+		if(pathName == 'question' || pathName == 'questionList' || pathName == 'result' || pathName== 'addsearch'){
+			$('.user-type-btn').css("visibility","hidden");
+		}else if(pathName == 'day1'){
+			$('.user-type-btn').css("visibility","visible");
+		}else{
+			$('.user-type-btn').css("visibility","visible");
+		}
+		
+		console.log();
+	}
 
 	$rootScope.updateHasLogin = function(val){
 		$timeout(function(){

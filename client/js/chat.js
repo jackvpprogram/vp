@@ -133,6 +133,18 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				// console.log($rootScope.day3Controller.pageData);
 		
 			}
+			$rootScope.resultBack = function(){
+				console.log($rootScope.data.resultBackInfo);
+				if($rootScope.data.resultBackInfo){
+					console.log('11');
+					history.go(-2);
+
+				}else{
+					console.log(22);
+					history.go(-1);
+				}
+
+			}
 
 
 			$(".loginBtn").on("click", function () {
@@ -219,11 +231,17 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				}
 				
 				console.log('11',$rootScope.data.questionArray);
+
 				$state.go('questionList');
+				setTimeout(() => {
+					$rootScope.showVPbtn();
+				}, 500);
+
 			})
 			socket.on("vote",function(data){
 				console.log('vote',data);
 				if(data){
+					$rootScope.data.resultBackInfo = true;
 					socket.emit("initVote",$rootScope.data.questionArray._id,$rootScope.data.user.userType);
 					
 				}
@@ -243,6 +261,9 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 					console.log($rootScope.data.questionResultArray);
 
 					$state.go('result');
+					setTimeout(() => {
+						$rootScope.showVPbtn();
+					}, 500);
 				}else{
 
 				}
@@ -252,7 +273,11 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				console.log(data);
 				if(data){
 					console.log('aa',$rootScope.data.user.userType);
+					alertBox('创建成功');
 					$state.go('day1');
+					setTimeout(() => {
+						$rootScope.showVPbtn();
+					}, 500);
 					$rootScope.data.addquestionName = '';
 					$rootScope.data.addquestionDesc = '';
 					
@@ -280,7 +305,9 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 					setTimeout(function(){
 						$state.go('question');
 					},500)
-					
+					setTimeout(() => {
+						$rootScope.showVPbtn();
+					}, 500);
 				}
 
 			})
@@ -1368,6 +1395,9 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			if (currentLoc == "login") {
 				targetState = "instructions";
 				$state.go(targetState)
+				setTimeout(() => {
+					$rootScope.showVPbtn();
+				}, 300);
 				return
 			} else if (currentLoc == "") {
 				targetState = "menu";
@@ -1386,7 +1416,11 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				if (currentLoc == "day5" && data.dow < 5)
 					targetState = "menu";
 
-				$state.go(targetState)
+				$state.go(targetState);
+				setTimeout(() => {
+					$rootScope.showVPbtn();
+				}, 300);
+
 				return
 			}
 
