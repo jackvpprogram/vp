@@ -365,7 +365,7 @@ function day1Controller($scope, $timeout, chatService){
 		previousBtnText: "",
 		nextBtnText: "Reimagine the Way We Work",
 		commentQuestion: "What are your thoughts after watching the video? Do you agree with the things said? Tell us here.",
-		questionBtn:'true'
+		questionBtn:true
 	}
 }
 day1Controller.$inject = ["$scope", "$timeout", "chatService"];

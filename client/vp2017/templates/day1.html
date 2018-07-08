@@ -33,7 +33,7 @@
                                         <source ng-src="{{video.src}}" type="video/mp4" />
                                         Your browser does not support HTML5 video.
                                     </video>
-                                    <div id="questionquiz" ng-if="pageData.question != true" ng-click="gotoquestionList(video.videoId)" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:10000;margin:0 auto;padding:0 12px;position: absolute;
+                                    <div id="questionquiz"  ng-click="gotoquestionList(video.videoId)" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:10000;margin:0 auto;padding:0 12px;position: absolute;
                                     bottom: -150px;">take a quiz</div>
                                             
                                 </div>
@@ -44,6 +44,8 @@
                             <!-- todo: change this dummy video -->
                             <div ng-if="pageData.day == 5" class="post-video">
                                 <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2417911/sp/241791100/embedIframeJs/uiconf_id/42868821/partner_id/2417911?iframeembed=true&playerId=kaltura_player&entry_id=1_sg9l7u8r&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;&wid=0_ws0csptf" width="642" height="400" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0" title="Kaltura Player"></iframe>
+                                <div id="questionquiz"  ng-click="gotoquestionList(video.videoId)" style="color:white;background:#dc1f2b;display:inline-block;height:40px;line-height:40px;z-index:10000;margin:0 auto;padding:0 12px;position: absolute;
+                                    bottom: -150px;">take a quiz</div>
                             </div>
 
                             <div class="post-navigation">
