@@ -116,7 +116,6 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 			userType: 1,
 			isAdmin: false
 		},
-		jack_userType:null,
 		comments: [],
 		currentReply: "",
 		currentCommentReplies: [],

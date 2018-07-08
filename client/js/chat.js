@@ -286,7 +286,9 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				if(data){
 					console.log('aa',$rootScope.data.user.userType);
 					alertBox('创建成功');
-					$state.go('day1');
+					// $state.go('day1');
+					history.go(-1);
+					$state.reload();
 					setTimeout(() => {
 						$rootScope.showVPbtn();
 					}, 500);
@@ -325,8 +327,8 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			})
 			socket.on("login", function (data) {
 				// console.log('111',data);
-				$rootScope.jack_userType = data.userType;
-				console.log($rootScope.jack_userType);
+				
+				
 				$rootScope.updateHasLogin(true)
 				// console.log("in login..." + data.username);
 				username = data.username;
