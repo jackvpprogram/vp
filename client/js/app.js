@@ -211,7 +211,13 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		if($rootScope.data.user.isAdmin){
 			$rootScope.data.user.userType = type
 			chatService.setUserType(type)
-			$state.reload()
+			socket.emit('getPollingList', $rootScope.data.currVideoId,$rootScope.data.user.userType);
+			
+			// setTimeout(function(){
+				$state.reload()
+			// },3000)
+			
+
 		}
 	}
 
