@@ -106,7 +106,12 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			$rootScope.questionVote = function(val){
 				console.log(val);
 				console.log( 'sss',$rootScope.data.questionArray._id);
-				socket.emit("vote",$rootScope.data.questionArray._id,val,$rootScope.data.user.userType);
+				if(val =='' || val == 'undefined'|| val == undefined){
+					console.log('没选择');
+					alertBox('请选择答案');
+				}else{
+					socket.emit("vote",$rootScope.data.questionArray._id,val,$rootScope.data.user.userType);
+				}
 				
 			}
 			$rootScope.questionNew = function(){
@@ -114,23 +119,30 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				// console.log('22',$rootScope.data.addquestionName);
 				console.log('send',$rootScope.data.user.userType);
 				console.log($rootScope.data.currVideoId);
-				if($rootScope.data.addquestionName != ''&&$rootScope.data.addquestionDesc != ''){
-					var okey = '';
-					// for(var i = 0 ; i < $rootScope.data.createArray.length; i++){
-					// 	if($rootScope.data.createArray[i].text != ''){
-							
-					// 	}else{
-					// 		okey = false;
-					// 	}
-					// }
-					
+
+				var okey =true;
+				console.log($rootScope.data.createArray);
+				for(var i = 0 ; i < $rootScope.data.createArray.length; i++){
+					console.log($rootScope.data.createArray[i].text);
+					if($rootScope.data.createArray[i].text != ''){
+						
+					}else{
+						alertBox('选项不能为空且值不能重复');
+						okey = false;
+					}
+				}
+				if($rootScope.data.addquestionName == ''){
+					alertBox('标题不能为空');
+				}
+				else if($rootScope.data.addquestionDesc == ''){
+					alertBox('描述不能为空');
+				}
+				else if(okey){
+					// console.log(222);
 					socket.emit("createPolling",$rootScope.data.currVideoId,$rootScope.data.user.userType,$rootScope.data.addquestionName,$rootScope.data.addquestionDesc,$rootScope.data.createArray)	
 					
-				}else{
-					alertBox('输入框不能为空');
 				}
-				// socket.emit("createPolling",'$rootScope.data.currVideoId', 0, 'dsdsd', '11', ['a', 'b'])
-				// console.log($rootScope.day3Controller.pageData);
+				
 		
 			}
 			$rootScope.resultBack = function(){
