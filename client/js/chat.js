@@ -75,11 +75,11 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 			//btn quiz
 			$rootScope.gotoquestionList = function(val){
 				console.log('333',val);
-				if(val != underfined && val != null){
+				if(val != 'underfined' && val != null){
 					$rootScope.data.currVideoId = val;
 					socket.emit('getPollingList', $rootScope.data.currVideoId,$rootScope.data.user.userType);
 				}else{
-					// alertBox('视频信息配置错误')；
+					alertBox("没有配置视频信息");
 				}
 				
 			}
