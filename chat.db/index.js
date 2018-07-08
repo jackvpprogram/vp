@@ -420,8 +420,27 @@ function findOrCreatePollingMap(videoId, userType) {
     returnOriginal: false
   });
 }
+function getPolling(pollingMapId, name) {
+  return pollingCollection.findOne({
+    pollingMapId: new ObjectID(pollingMapId),
+    name: name
+  })
+}
+function getPollingChooseByPollingId(pollingId, userId, userType) {
+  return pollingChooseCollection.findOne({
+    pollingId: new ObjectID(pollingId)
+  })
+}
 exports.createPolling = Q.async(function*(videoId, userType, name, desc, answers) {
   var pollingMap = yield findOrCreatePollingMap(videoId, userType);
+  var polling = yield getPolling(pollingMap.value._id, name);
+  // if polling is voted then return else updateOrInsert
+  if (polling) {
+    var isPollingVote = yield getPollingChooseByPollingId(polling._id);
+    if (isPollingVote) {
+      return;
+    }
+  }
   return pollingCollection.updateOne({
     pollingMapId: new ObjectID(pollingMap.value._id),
     name: name
