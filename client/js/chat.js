@@ -316,8 +316,10 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 				$rootScope.jack_userType = data.userType;
 				console.log($rootScope.jack_userType);
 				$rootScope.updateHasLogin(true)
-				console.log("in login..." + data.username);
+				// console.log("in login..." + data.username);
 				username = data.username;
+				$rootScope.data.currUserName = data.username;
+				// console.log('my login', $rootScope.data.currUserName);
 				setCookie("username", username, 1);
 
 				$("#usernameSpan").text(username);

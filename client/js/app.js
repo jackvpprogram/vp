@@ -120,6 +120,7 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		comments: [],
 		currentReply: "",
 		currentCommentReplies: [],
+		currUserName:null,
 		currVideoId:'',
 		questionNameArray:[],
 		questionArray:[],
@@ -151,6 +152,24 @@ function Setup($rootScope, $state, $timeout, utilityService, chatService){
 		//返回上一级路由
 		// console.log('back11');
 		history.go(-1);
+		// $rootScope.showVPbtn();
+		setTimeout(function(){
+			var aaourl = window.location.href;
+			var aatempArr = aaourl.split('/');
+			var aapathName = aatempArr[aatempArr.length-1];
+			console.log(aapathName);
+
+			// $('.user-type-btn').css("visibility","visible");
+			
+			if(aapathName == 'question' || aapathName == 'questionList' || aapathName == 'result' || aapathName== 'addsearch'){
+				// $('.user-type-btn').css("visibility","hidden");
+				// console.log(111);
+			}else{
+				// console.log('111');
+				$('.user-type-btn').css("visibility","visible");
+			}
+		},300)
+		
 
 	}
 	// $rootScope.questionNew = function(){
