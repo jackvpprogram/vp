@@ -79,7 +79,7 @@ angular.module("vpconf.chatService", []).factory("chatService", [
 					$rootScope.data.currVideoId = val;
 					socket.emit('getPollingList', $rootScope.data.currVideoId,$rootScope.data.user.userType);
 				}else{
-					alertBox('视频信息配置错误')；
+					// alertBox('视频信息配置错误')；
 				}
 				
 			}
